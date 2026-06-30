@@ -57,26 +57,37 @@ class PeakRSS(threading.Thread):
         return round(self.peak_mb, 1)
 
 
-def run_ollama(model, prompt, num_ctx, num_predict):
-    body = json.dumps({
-        "model": model, "prompt": prompt, "stream": False,
-        # low (not zero) temp + repeat penalty: pure greedy makes small models loop
-        # ("A resource failed to call release." x800). Same knobs as the llama.cpp path.
-        "options": {"num_ctx": num_ctx, "num_predict": num_predict,
-                    "temperature": 0.3, "top_p": 0.95, "repeat_penalty": 1.1},
-    }).encode()
-    sampler = PeakRSS("ollama"); sampler.start()
-    t0 = time.time()
+def _ollama_post(payload):
+    body = json.dumps(payload).encode()
     req = urllib.request.Request("http://localhost:11434/api/generate", body,
                                  {"Content-Type": "application/json"})
     # Bypass any HTTP(S)_PROXY for the local ollama server.
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+    with opener.open(req, timeout=1800) as r:
+        return json.load(r)
+
+
+def run_ollama(model, prompt, num_ctx, num_predict):
+    payload = {
+        "model": model, "prompt": prompt, "stream": False,
+        "think": False,  # don't waste CPU on reasoning traces (gemma4 etc.)
+        # low (not zero) temp + repeat penalty: pure greedy makes small models loop
+        # ("A resource failed to call release." x800). Same knobs as the llama.cpp path.
+        "options": {"num_ctx": num_ctx, "num_predict": num_predict,
+                    "temperature": 0.3, "top_p": 0.95, "repeat_penalty": 1.1},
+    }
+    sampler = PeakRSS("ollama"); sampler.start()
+    t0 = time.time()
     try:
-        with opener.open(req, timeout=1800) as r:
-            data = json.load(r)
+        data = _ollama_post(payload)
     except urllib.error.HTTPError as e:
-        # Surface ollama's own error (e.g. model runner crash) instead of a bare 500.
-        sys.exit(f"ollama HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:1000]}")
+        msg = e.read().decode("utf-8", "replace")
+        # Non-thinking models reject the `think` field; retry without it.
+        if e.code == 400 and "think" in msg.lower():
+            del payload["think"]
+            data = _ollama_post(payload)
+        else:
+            sys.exit(f"ollama HTTP {e.code}: {msg[:1000]}")
     wall = time.time() - t0
     peak = sampler.stop()
     pe_n, pe_d = data.get("prompt_eval_count", 0), data.get("prompt_eval_duration", 1)
@@ -132,7 +143,7 @@ def main():
     ap.add_argument("--runner-label", default=os.environ.get("RUNNER_LABEL", "local"))
     ap.add_argument("--out-dir", type=Path, default=Path("results"))
     ap.add_argument("--num-ctx", type=int, default=8192)
-    ap.add_argument("--num-predict", type=int, default=800)
+    ap.add_argument("--num-predict", type=int, default=512)
     ap.add_argument("--gguf", help="local GGUF path (llama.cpp)")
     ap.add_argument("--hf-repo", help="HF GGUF repo:quant for llama-cli -hf (llama.cpp)")
     ap.add_argument("--llama-bin", default="llama-cli")

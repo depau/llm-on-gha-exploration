@@ -27,14 +27,14 @@ jobs:
             hf: "bartowski/SmolLM2-1.7B-Instruct-GGUF:Q4_K_M"
           - label: gemma4-e2b   # effective ~2B edge model (~3GB Q4)
             ollama: "gemma4:e2b"
-            hf: "ggml-org/gemma-4-E2B-it-GGUF"
+            hf: "ggml-org/gemma-4-E2B-it-GGUF:Q4_K_M"
           - label: gemma4-e4b   # effective ~4B edge model (~4.8GB Q4)
             ollama: "gemma4:e4b"
-            hf: "ggml-org/gemma-4-E4B-it-GGUF"
+            hf: "ggml-org/gemma-4-E4B-it-GGUF:Q4_K_M"
         exclude:
           # gemma4:e4b (~4.8GB Q4) is too tight for the M1's ~5GB usable RAM (both engines).
           - runner: macos-14
-            model: {label: gemma4-e4b, ollama: "gemma4:e4b", hf: "ggml-org/gemma-4-E4B-it-GGUF"}
+            model: {label: gemma4-e4b, ollama: "gemma4:e4b", hf: "ggml-org/gemma-4-E4B-it-GGUF:Q4_K_M"}
     env:
       RUNNER_LABEL: ${{ matrix.runner }}
     steps:
@@ -57,14 +57,16 @@ jobs:
       # ---- engine: ollama -------------------------------------------------
       - name: Install & start ollama
         if: matrix.engine == 'ollama'
-        env:
-          # macOS GitHub runners are headless VMs with no usable Metal GPU; the model
-          # runner 500s on load unless we force pure-CPU inference. No-op on Linux.
-          OLLAMA_NUM_GPU: "0"
         run: |
           set -e
           if [ "$RUNNER_OS" = "macOS" ]; then
-            brew install ollama
+            # The Homebrew formula ships ollama WITHOUT the llama-server backend
+            # ("llama-server binary not found" -> 500). Use the official CLI tarball.
+            curl -fsSL https://github.com/ollama/ollama/releases/latest/download/ollama-darwin.tgz -o ollama.tgz
+            mkdir -p "$HOME/ollama-dist" && tar -xzf ollama.tgz -C "$HOME/ollama-dist"
+            BINDIR=$(dirname "$(find "$HOME/ollama-dist" -type f -name ollama | head -1)")
+            export PATH="$BINDIR:$PATH"
+            echo "$BINDIR" >> "$GITHUB_PATH"
           else
             curl -fsSL https://ollama.com/install.sh | sh
           fi
@@ -118,9 +120,14 @@ jobs:
             --hf-repo "${{ matrix.model.hf }}" --llama-bin "$LLAMA_BIN" \
             --log filtered.log --case hard --runner-label "$RUNNER_LABEL"
 
-      - name: Dump ollama server log on failure
-        if: failure() && matrix.engine == 'ollama'
-        run: tail -50 ollama-serve.log || true
+      - name: Report ollama backend (GPU vs CPU)
+        if: always() && matrix.engine == 'ollama'
+        run: |
+          echo "### ollama backend ($RUNNER_LABEL · ${{ matrix.model.label }})" >> "$GITHUB_STEP_SUMMARY"
+          # ollama logs what it discovered/selected: GPUs, library, layers offloaded.
+          grep -iE 'gpu|metal|library|offload|inference compute|no compatible' ollama-serve.log \
+            | sed 's/^/    /' >> "$GITHUB_STEP_SUMMARY" || echo "    (no backend lines found)" >> "$GITHUB_STEP_SUMMARY"
+          echo "::group::ollama-serve.log (tail)"; tail -60 ollama-serve.log || true; echo "::endgroup::"
 
       - name: Job summary
         if: always()
