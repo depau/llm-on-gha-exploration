@@ -37,10 +37,10 @@ class PeakRSS(threading.Thread):
         super().__init__(daemon=True)
         self.name = name
         self.peak_mb = 0.0
-        self._stop = threading.Event()
+        self._stop_evt = threading.Event()  # not _stop: Thread._stop() is internal
 
     def run(self):
-        while not self._stop.is_set():
+        while not self._stop_evt.is_set():
             try:
                 out = subprocess.check_output(["ps", "-axo", "rss=,comm="], text=True)
                 kb = sum(int(l.split(None, 1)[0]) for l in out.splitlines()
@@ -48,10 +48,10 @@ class PeakRSS(threading.Thread):
                 self.peak_mb = max(self.peak_mb, kb / 1024)
             except Exception:
                 pass
-            self._stop.wait(0.5)
+            self._stop_evt.wait(0.5)
 
     def stop(self):
-        self._stop.set()
+        self._stop_evt.set()
         self.join(timeout=2)
         return round(self.peak_mb, 1)
 

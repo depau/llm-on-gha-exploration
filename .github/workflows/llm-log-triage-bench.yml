@@ -25,13 +25,22 @@ jobs:
           - label: smollm2-1.7b
             ollama: "smollm2:1.7b"
             hf: "bartowski/SmolLM2-1.7B-Instruct-GGUF:Q4_K_M"
-          - label: gemma3-1b
-            ollama: "gemma3:1b"
-            hf: "ggml-org/gemma-3-1b-it-GGUF:Q4_K_M"
-          - label: gemma3-4b
-            ollama: "gemma3:4b"
-            hf: "ggml-org/gemma-3-4b-it-GGUF:Q4_K_M"
-        # gemma3:4b Q4 (~3.3GB) fits the M1's ~5GB usable; if it OOMs, exclude here.
+          - label: gemma4-e2b   # effective ~2B edge model (~3GB Q4)
+            ollama: "gemma4:e2b"
+            hf: ""              # no verified GGUF yet -> excluded from llama.cpp below
+          - label: gemma4-e4b   # effective ~4B edge model (~4.8GB Q4)
+            ollama: "gemma4:e4b"
+            hf: ""
+        exclude:
+          # gemma4 has no confirmed HF GGUF yet; run it on ollama only. When a GGUF
+          # lands, set the model's `hf:` above and drop these two excludes.
+          - engine: llama.cpp
+            model: {label: gemma4-e2b, ollama: "gemma4:e2b", hf: ""}
+          - engine: llama.cpp
+            model: {label: gemma4-e4b, ollama: "gemma4:e4b", hf: ""}
+          # gemma4:e4b (~4.8GB Q4) is too tight for the M1's ~5GB usable RAM.
+          - runner: macos-14
+            model: {label: gemma4-e4b, ollama: "gemma4:e4b", hf: ""}
     env:
       RUNNER_LABEL: ${{ matrix.runner }}
     steps:
@@ -77,26 +86,38 @@ jobs:
             --log filtered.log --case hard --runner-label "$RUNNER_LABEL"
 
       # ---- engine: llama.cpp ----------------------------------------------
-      - name: Build llama.cpp
+      - name: Download prebuilt llama.cpp
+        # Use official CPU release binaries instead of compiling (the source build
+        # OOM-killed cc1plus on the 16GB runners). ~10s vs several minutes.
         if: matrix.engine == 'llama.cpp'
         run: |
           set -e
-          if [ "$RUNNER_OS" != "macOS" ]; then
-            sudo apt-get update && sudo apt-get install -y cmake libcurl4-openssl-dev
-          fi
-          git clone --depth 1 https://github.com/ggml-org/llama.cpp
-          cmake -B build -DCMAKE_BUILD_TYPE=Release -DLLAMA_CURL=ON llama.cpp
-          cmake --build build -j --target llama-cli
+          case "$RUNNER_OS-$(uname -m)" in
+            Linux-x86_64)  PLAT=ubuntu-x64 ;;
+            Linux-aarch64) PLAT=ubuntu-arm64 ;;
+            macOS-arm64)   PLAT=macos-arm64 ;;
+            *) echo "unsupported platform $RUNNER_OS-$(uname -m)"; exit 1 ;;
+          esac
+          TAG=$(curl -fsSL https://api.github.com/repos/ggml-org/llama.cpp/releases/latest \
+                | grep -oE '"tag_name":\s*"[^"]+"' | head -1 | grep -oE '[^"]+$')
+          URL="https://github.com/ggml-org/llama.cpp/releases/download/${TAG}/llama-${TAG}-bin-${PLAT}.tar.gz"
+          echo "Downloading $URL"
+          mkdir -p llamacpp && curl -fsSL "$URL" | tar -xz -C llamacpp
+          BIN=$(find llamacpp -type f -name llama-cli | head -1)
+          echo "LLAMA_BIN=$BIN" >> "$GITHUB_ENV"
+          # shared libs ship alongside the binary; make sure they're found at runtime
+          echo "LD_LIBRARY_PATH=$(dirname "$BIN")" >> "$GITHUB_ENV"
+          echo "DYLD_LIBRARY_PATH=$(dirname "$BIN")" >> "$GITHUB_ENV"
 
       - name: Run llama.cpp benchmark
         if: matrix.engine == 'llama.cpp'
         run: |
           set -e
           python bench/run_bench.py --engine llama.cpp --model "${{ matrix.model.label }}" \
-            --hf-repo "${{ matrix.model.hf }}" --llama-bin build/bin/llama-cli \
+            --hf-repo "${{ matrix.model.hf }}" --llama-bin "$LLAMA_BIN" \
             --log appium.log --case easy --runner-label "$RUNNER_LABEL"
           python bench/run_bench.py --engine llama.cpp --model "${{ matrix.model.label }}" \
-            --hf-repo "${{ matrix.model.hf }}" --llama-bin build/bin/llama-cli \
+            --hf-repo "${{ matrix.model.hf }}" --llama-bin "$LLAMA_BIN" \
             --log filtered.log --case hard --runner-label "$RUNNER_LABEL"
 
       - name: Job summary
