@@ -15,6 +15,7 @@ import sys
 import threading
 import time
 import urllib.request
+import urllib.error
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -59,7 +60,10 @@ class PeakRSS(threading.Thread):
 def run_ollama(model, prompt, num_ctx, num_predict):
     body = json.dumps({
         "model": model, "prompt": prompt, "stream": False,
-        "options": {"num_ctx": num_ctx, "num_predict": num_predict, "temperature": 0},
+        # low (not zero) temp + repeat penalty: pure greedy makes small models loop
+        # ("A resource failed to call release." x800). Same knobs as the llama.cpp path.
+        "options": {"num_ctx": num_ctx, "num_predict": num_predict,
+                    "temperature": 0.3, "top_p": 0.95, "repeat_penalty": 1.1},
     }).encode()
     sampler = PeakRSS("ollama"); sampler.start()
     t0 = time.time()
@@ -67,8 +71,12 @@ def run_ollama(model, prompt, num_ctx, num_predict):
                                  {"Content-Type": "application/json"})
     # Bypass any HTTP(S)_PROXY for the local ollama server.
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
-    with opener.open(req, timeout=1800) as r:
-        data = json.load(r)
+    try:
+        with opener.open(req, timeout=1800) as r:
+            data = json.load(r)
+    except urllib.error.HTTPError as e:
+        # Surface ollama's own error (e.g. model runner crash) instead of a bare 500.
+        sys.exit(f"ollama HTTP {e.code}: {e.read().decode('utf-8', 'replace')[:1000]}")
     wall = time.time() - t0
     peak = sampler.stop()
     pe_n, pe_d = data.get("prompt_eval_count", 0), data.get("prompt_eval_duration", 1)
@@ -104,7 +112,8 @@ def parse_llama_perf(stderr):
 def run_llama(llama_bin, model_arg, prompt, num_ctx, num_predict):
     promptfile = Path("_prompt.txt"); promptfile.write_text(prompt)
     cmd = [llama_bin, *model_arg, "-c", str(num_ctx), "-n", str(num_predict),
-           "--temp", "0", "-no-cnv", "--no-display-prompt", "-f", str(promptfile)]
+           "--temp", "0.3", "--top-p", "0.95", "--repeat-penalty", "1.1",
+           "-no-cnv", "--no-display-prompt", "-f", str(promptfile)]
     sampler = PeakRSS(Path(llama_bin).name); sampler.start()
     t0 = time.time()
     p = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)

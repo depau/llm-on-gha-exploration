@@ -27,20 +27,14 @@ jobs:
             hf: "bartowski/SmolLM2-1.7B-Instruct-GGUF:Q4_K_M"
           - label: gemma4-e2b   # effective ~2B edge model (~3GB Q4)
             ollama: "gemma4:e2b"
-            hf: ""              # no verified GGUF yet -> excluded from llama.cpp below
+            hf: "ggml-org/gemma-4-E2B-it-GGUF"
           - label: gemma4-e4b   # effective ~4B edge model (~4.8GB Q4)
             ollama: "gemma4:e4b"
-            hf: ""
+            hf: "ggml-org/gemma-4-E4B-it-GGUF"
         exclude:
-          # gemma4 has no confirmed HF GGUF yet; run it on ollama only. When a GGUF
-          # lands, set the model's `hf:` above and drop these two excludes.
-          - engine: llama.cpp
-            model: {label: gemma4-e2b, ollama: "gemma4:e2b", hf: ""}
-          - engine: llama.cpp
-            model: {label: gemma4-e4b, ollama: "gemma4:e4b", hf: ""}
-          # gemma4:e4b (~4.8GB Q4) is too tight for the M1's ~5GB usable RAM.
+          # gemma4:e4b (~4.8GB Q4) is too tight for the M1's ~5GB usable RAM (both engines).
           - runner: macos-14
-            model: {label: gemma4-e4b, ollama: "gemma4:e4b", hf: ""}
+            model: {label: gemma4-e4b, ollama: "gemma4:e4b", hf: "ggml-org/gemma-4-E4B-it-GGUF"}
     env:
       RUNNER_LABEL: ${{ matrix.runner }}
     steps:
@@ -63,6 +57,10 @@ jobs:
       # ---- engine: ollama -------------------------------------------------
       - name: Install & start ollama
         if: matrix.engine == 'ollama'
+        env:
+          # macOS GitHub runners are headless VMs with no usable Metal GPU; the model
+          # runner 500s on load unless we force pure-CPU inference. No-op on Linux.
+          OLLAMA_NUM_GPU: "0"
         run: |
           set -e
           if [ "$RUNNER_OS" = "macOS" ]; then
@@ -81,33 +79,36 @@ jobs:
         run: |
           set -e
           python bench/run_bench.py --engine ollama --model "${{ matrix.model.ollama }}" \
-            --log appium.log --case easy --runner-label "$RUNNER_LABEL"
-          python bench/run_bench.py --engine ollama --model "${{ matrix.model.ollama }}" \
             --log filtered.log --case hard --runner-label "$RUNNER_LABEL"
 
       # ---- engine: llama.cpp ----------------------------------------------
-      - name: Download prebuilt llama.cpp
-        # Use official CPU release binaries instead of compiling (the source build
-        # OOM-killed cc1plus on the 16GB runners). ~10s vs several minutes.
+      - name: Install llama.cpp
+        # Prebuilt binaries only (compiling OOM-killed cc1plus on the 16GB runners).
+        # macOS: Homebrew bottle (recommended). Linux: official release tarball, with
+        # the tag resolved via authenticated `gh` (unauthenticated api.github.com is
+        # rate-limited from Actions IPs -> empty tag -> bad URL).
         if: matrix.engine == 'llama.cpp'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -e
-          case "$RUNNER_OS-$(uname -m)" in
-            Linux-x86_64)  PLAT=ubuntu-x64 ;;
-            Linux-aarch64) PLAT=ubuntu-arm64 ;;
-            macOS-arm64)   PLAT=macos-arm64 ;;
-            *) echo "unsupported platform $RUNNER_OS-$(uname -m)"; exit 1 ;;
-          esac
-          TAG=$(curl -fsSL https://api.github.com/repos/ggml-org/llama.cpp/releases/latest \
-                | grep -oE '"tag_name":\s*"[^"]+"' | head -1 | grep -oE '[^"]+$')
-          URL="https://github.com/ggml-org/llama.cpp/releases/download/${TAG}/llama-${TAG}-bin-${PLAT}.tar.gz"
-          echo "Downloading $URL"
-          mkdir -p llamacpp && curl -fsSL "$URL" | tar -xz -C llamacpp
-          BIN=$(find llamacpp -type f -name llama-cli | head -1)
-          echo "LLAMA_BIN=$BIN" >> "$GITHUB_ENV"
-          # shared libs ship alongside the binary; make sure they're found at runtime
-          echo "LD_LIBRARY_PATH=$(dirname "$BIN")" >> "$GITHUB_ENV"
-          echo "DYLD_LIBRARY_PATH=$(dirname "$BIN")" >> "$GITHUB_ENV"
+          if [ "$RUNNER_OS" = "macOS" ]; then
+            brew install llama.cpp
+            echo "LLAMA_BIN=llama-cli" >> "$GITHUB_ENV"
+          else
+            case "$(uname -m)" in
+              x86_64)  PLAT=ubuntu-x64 ;;
+              aarch64) PLAT=ubuntu-arm64 ;;
+              *) echo "unsupported arch $(uname -m)"; exit 1 ;;
+            esac
+            TAG=$(gh release view --repo ggml-org/llama.cpp --json tagName -q .tagName)
+            URL="https://github.com/ggml-org/llama.cpp/releases/download/${TAG}/llama-${TAG}-bin-${PLAT}.tar.gz"
+            echo "Downloading $URL"
+            mkdir -p llamacpp && curl -fsSL "$URL" | tar -xz -C llamacpp
+            BIN=$(find llamacpp -type f -name llama-cli | head -1)
+            echo "LLAMA_BIN=$BIN" >> "$GITHUB_ENV"
+            echo "LD_LIBRARY_PATH=$(dirname "$BIN")" >> "$GITHUB_ENV"
+          fi
 
       - name: Run llama.cpp benchmark
         if: matrix.engine == 'llama.cpp'
@@ -115,10 +116,11 @@ jobs:
           set -e
           python bench/run_bench.py --engine llama.cpp --model "${{ matrix.model.label }}" \
             --hf-repo "${{ matrix.model.hf }}" --llama-bin "$LLAMA_BIN" \
-            --log appium.log --case easy --runner-label "$RUNNER_LABEL"
-          python bench/run_bench.py --engine llama.cpp --model "${{ matrix.model.label }}" \
-            --hf-repo "${{ matrix.model.hf }}" --llama-bin "$LLAMA_BIN" \
             --log filtered.log --case hard --runner-label "$RUNNER_LABEL"
+
+      - name: Dump ollama server log on failure
+        if: failure() && matrix.engine == 'ollama'
+        run: tail -50 ollama-serve.log || true
 
       - name: Job summary
         if: always()
