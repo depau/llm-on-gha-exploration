@@ -1,0 +1,132 @@
+name: LLM log-triage benchmark
+
+# Feasibility benchmark: can small CPU-only LLMs surface the real error from noisy
+# CI logs? Matrix = runner OS/arch × model × inference engine, run in parallel.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bench:
+    name: ${{ matrix.runner }} · ${{ matrix.engine }} · ${{ matrix.model.label }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, ubuntu-24.04-arm, macos-14]
+        engine: [ollama, llama.cpp]
+        model:
+          - label: qwen2.5-coder-1.5b
+            ollama: "qwen2.5-coder:1.5b"
+            hf: "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF:Q4_K_M"
+          - label: smollm2-1.7b
+            ollama: "smollm2:1.7b"
+            hf: "bartowski/SmolLM2-1.7B-Instruct-GGUF:Q4_K_M"
+          - label: gemma3-1b
+            ollama: "gemma3:1b"
+            hf: "ggml-org/gemma-3-1b-it-GGUF:Q4_K_M"
+          - label: gemma3-4b
+            ollama: "gemma3:4b"
+            hf: "ggml-org/gemma-3-4b-it-GGUF:Q4_K_M"
+        # gemma3:4b Q4 (~3.3GB) fits the M1's ~5GB usable; if it OOMs, exclude here.
+    env:
+      RUNNER_LABEL: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pre-filter the noisy logcat
+        # Input is the app-scoped logcat (upstream pid/app filter); prefilter.py then
+        # strips codec/graphics noise, dedups, and caps to the token budget.
+        # Falls back to the raw logcat if the app-scoped one isn't present.
+        run: |
+          src=test_accept_notifications.app.log
+          [ -f "$src" ] || src=test_accept_notifications.log
+          python bench/prefilter.py "$src" > filtered.log
+          echo "Filtered $src -> $(wc -c < filtered.log) bytes"
+
+      # ---- engine: ollama -------------------------------------------------
+      - name: Install & start ollama
+        if: matrix.engine == 'ollama'
+        run: |
+          set -e
+          if [ "$RUNNER_OS" = "macOS" ]; then
+            brew install ollama
+          else
+            curl -fsSL https://ollama.com/install.sh | sh
+          fi
+          ollama serve > ollama-serve.log 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:11434/api/version && break || sleep 1
+          done
+          ollama pull "${{ matrix.model.ollama }}"
+
+      - name: Run ollama benchmark
+        if: matrix.engine == 'ollama'
+        run: |
+          set -e
+          python bench/run_bench.py --engine ollama --model "${{ matrix.model.ollama }}" \
+            --log appium.log --case easy --runner-label "$RUNNER_LABEL"
+          python bench/run_bench.py --engine ollama --model "${{ matrix.model.ollama }}" \
+            --log filtered.log --case hard --runner-label "$RUNNER_LABEL"
+
+      # ---- engine: llama.cpp ----------------------------------------------
+      - name: Build llama.cpp
+        if: matrix.engine == 'llama.cpp'
+        run: |
+          set -e
+          if [ "$RUNNER_OS" != "macOS" ]; then
+            sudo apt-get update && sudo apt-get install -y cmake libcurl4-openssl-dev
+          fi
+          git clone --depth 1 https://github.com/ggml-org/llama.cpp
+          cmake -B build -DCMAKE_BUILD_TYPE=Release -DLLAMA_CURL=ON llama.cpp
+          cmake --build build -j --target llama-cli
+
+      - name: Run llama.cpp benchmark
+        if: matrix.engine == 'llama.cpp'
+        run: |
+          set -e
+          python bench/run_bench.py --engine llama.cpp --model "${{ matrix.model.label }}" \
+            --hf-repo "${{ matrix.model.hf }}" --llama-bin build/bin/llama-cli \
+            --log appium.log --case easy --runner-label "$RUNNER_LABEL"
+          python bench/run_bench.py --engine llama.cpp --model "${{ matrix.model.label }}" \
+            --hf-repo "${{ matrix.model.hf }}" --llama-bin build/bin/llama-cli \
+            --log filtered.log --case hard --runner-label "$RUNNER_LABEL"
+
+      - name: Job summary
+        if: always()
+        run: cat results/*.md >> "$GITHUB_STEP_SUMMARY" || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-${{ matrix.runner }}-${{ matrix.engine }}-${{ matrix.model.label }}
+          path: results/
+
+  aggregate:
+    needs: bench
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          path: results
+          pattern: results-*
+      - name: Build leaderboard
+        run: |
+          python bench/aggregate.py results > SUMMARY.md
+          cat SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-summary
+          path: SUMMARY.md

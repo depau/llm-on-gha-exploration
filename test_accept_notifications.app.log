@@ -1,0 +1,726 @@
+06-30 18:11:07.566   992  4492 I ActivityManager: Force stopping eu.depau.etchdroid appid=10282 user=0: clear data
+06-30 18:11:07.566   992  4492 I ActivityManager: Killing 4895:eu.depau.etchdroid/u0a282 (adj 0): stop eu.depau.etchdroid due to clear data
+06-30 18:11:07.567   992  4492 W ActivityTaskManager: Force removing ActivityRecord{7654280 u0 eu.depau.etchdroid/.ui.MainActivity} t16 f}}: app died, no saved state
+06-30 18:11:07.570   992  4492 W InputManager-JNI: Input channel object '6f22c5f Splash Screen eu.depau.etchdroid (client)' was disposed without first being removed with the input manager!
+06-30 18:11:07.572   992  4492 W InputManager-JNI: Input channel object '49dcc55 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+06-30 18:11:07.578   992  1017 I ActivityManager: Force stopping eu.depau.etchdroid appid=10282 user=-1: clearApplicationUserData
+06-30 18:11:07.584   992  1036 I AppsFilter: interaction: PackageSetting{ee66b4e io.appium.uiautomator2.server.test/10288} -> PackageSetting{d3311ca eu.depau.etchdroid/10282} BLOCKED
+06-30 18:11:07.585   992  1036 I AppsFilter: interaction: PackageSetting{fb61c82 io.appium.settings/10287} -> PackageSetting{d3311ca eu.depau.etchdroid/10282} BLOCKED
+06-30 18:11:07.586  1784  1784 D CarrierSvcBindHelper: onHandleForceStop: [eu.depau.etchdroid]
+06-30 18:11:07.613  3264  3264 D GmsGcmUnregisterRcvr: Package removed or data cleared: eu.depau.etchdroid
+06-30 18:11:07.628  2236  2627 D MediaProvider: Deleted 0 Android/media items belonging to eu.depau.etchdroid on /data/user/0/com.android.providers.media.module/databases/external.db
+06-30 18:11:07.636   992  4140 V ActivityManager: Got obituary of 4895:eu.depau.etchdroid
+06-30 18:11:07.636   992  4140 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(uid/pid:10282/4895, [NetworkRequest [ REQUEST id=122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]], android.os.BinderProxy@39b817a)
+06-30 18:11:07.637   992  1466 D ConnectivityService: releasing NetworkRequest [ REQUEST id=122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ] (release request)
+06-30 18:11:07.637   992  1465 D EthernetNetworkFactory: eth0: onNetworkUnneeded for request: NetworkRequest [ REQUEST id=122, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:07.673   992  1006 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=eu.depau.etchdroid/.ui.MainActivity} from uid 2000
+06-30 18:11:07.716   992  1018 I ActivityManager: Start proc 4990:eu.depau.etchdroid/u0a282 for next-top-activity {eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}
+06-30 18:11:07.744  4990  4990 W depau.etchdroid: Unexpected CPU variant for x86: generic.
+06-30 18:11:07.744  4990  4990 W depau.etchdroid: Known variants: atom, sandybridge, silvermont, kabylake, default
+06-30 18:11:07.747  4990  4990 E depau.etchdroid: Not starting debugger since process cannot load the jdwp agent.
+06-30 18:11:07.761  4990  5019 E ashmem  : memfd: ro.vndk.version not defined or invalid (), this is mandated since P.
+06-30 18:11:07.762  4990  4990 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10282; state: ENABLED
+06-30 18:11:07.770  4990  4990 W depau.etchdroid: ClassLoaderContext classpath element mismatch. expected=/system_ext/framework/androidx.window.extensions.jar, found=/system/system_ext/framework/androidx.window.extensions.jar (PCL[]{PCL[/system_ext/framework/androidx.window.extensions.jar*214366484]#PCL[/system_ext/framework/androidx.window.sidecar.jar*368491714]} | PCL[]{PCL[/system/system_ext/framework/androidx.window.extensions.jar*214366484]#PCL[/system/system_ext/framework/androidx.window.sidecar.jar*368491714]})
+06-30 18:11:07.793  4990  4990 V GraphicsEnvironment: ANGLE Developer option for 'eu.depau.etchdroid' set to: 'default'
+06-30 18:11:07.793  4990  4990 V GraphicsEnvironment: ANGLE GameManagerService for eu.depau.etchdroid: false
+06-30 18:11:07.793  4990  4990 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+06-30 18:11:07.799  4990  4990 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+06-30 18:11:07.799  4990  4990 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+06-30 18:11:07.814  4990  4990 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10282; state: ENABLED
+06-30 18:11:07.829  4990  4990 D FirebaseSessions: Dependency to CRASHLYTICS added.
+06-30 18:11:07.830  4990  4990 I FirebaseApp: Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+06-30 18:11:07.854  4990  4990 D FirebaseSessions: Initializing Firebase Sessions 3.0.6.
+06-30 18:11:07.855  4990  4990 I FirebaseCrashlytics: Initializing Firebase Crashlytics 20.0.6 for eu.depau.etchdroid
+06-30 18:11:07.868  4990  4990 D FirebaseSessions: Subscriber CRASHLYTICS registered.
+06-30 18:11:07.882  4990  4990 I FirebaseInitProvider: FirebaseApp initialization successful
+06-30 18:11:07.883  4990  4990 D Sentry  : io.sentry.auto-init read: false
+06-30 18:11:07.884  4990  5031 D FirebaseSessions: No Sessions subscribers. Not listening to lifecycle events.
+06-30 18:11:07.885  4990  5030 D FirebaseSessions: Notified CRASHLYTICS of new session be5a1bf2860c40248150301fc1de135a
+06-30 18:11:07.928  4990  5031 I FirebaseCrashlytics: Saved version control info
+06-30 18:11:07.930  4990  4990 I Telemetry: Enabled: true
+06-30 18:11:07.930  4990  4990 I Telemetry: Enabled: true
+06-30 18:11:07.947   992  1006 D ConnectivityService: requestNetwork for uid/pid:10282/4990 activeRequest: null callbackRequest: 127 [NetworkRequest [ REQUEST id=128, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+06-30 18:11:07.948   992  1465 D EthernetNetworkFactory: eth0: onNetworkNeeded for request: NetworkRequest [ REQUEST id=128, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:07.948  1784  1784 D PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ REQUEST id=128, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:07.954   992  1352 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=128, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:07.954   992  1352 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=128, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:07.954   992  1352 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=128, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:07.967  4990  5034 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+06-30 18:11:07.983   992  1017 W BroadcastQueue: Exported Denial: sending Intent { act=android.intent.action.BATTERY_CHANGED flg=0x60000010 (has extras) }, action: android.intent.action.BATTERY_CHANGED from null (uid=-1) due to receiver ProcessRecord{b5e3cc 4990:eu.depau.etchdroid/u0a282} (uid 10282) not specifying RECEIVER_EXPORTED
+06-30 18:11:07.985  4990  5032 D TrafficStats: tagSocket(82) with statsTag=0x8001, statsUid=-1
+06-30 18:11:07.988  4990  5067 D TrafficStats: tagSocket(79) with statsTag=0xf001, statsUid=-1
+06-30 18:11:08.048  4990  4990 D FirebaseSessions: App foregrounded on eu.depau.etchdroid
+06-30 18:11:08.048  4990  4990 D FirebaseSessions: Session be5a1bf2860c40248150301fc1de135a has not backgrounded yet
+06-30 18:11:08.048  4990  4990 D FirebaseSessions: No process data for eu.depau.etchdroid
+06-30 18:11:08.050  4990  5031 D FirebaseSessions: Session 9c90bbb96dac448989a4b0bee3af6f25 has not backgrounded yet
+06-30 18:11:08.050  4990  5031 D FirebaseSessions: No process data map
+06-30 18:11:08.050  4990  5031 D FirebaseSessions: No process data for eu.depau.etchdroid
+06-30 18:11:08.052  4990  4990 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10282; state: DISABLED
+06-30 18:11:08.053  4990  5031 D FirebaseSessions: Notified CRASHLYTICS of new session 8623af3a4a4f4bc480038d900e6de35e
+06-30 18:11:08.087  4990  5072 W Parcel  : Expecting binder but got null!
+06-30 18:11:08.096   992  1725 D CoreBackPreview: Window{ba480e1 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@3e4cc7, mPriority=-1}
+06-30 18:11:08.118  4990  4990 D CompatibilityChangeReporter: Compat change id reported: 193247900; UID 10282; state: ENABLED
+06-30 18:11:08.192  4990  5037 D FirebaseSessions: Fetching settings from server.
+06-30 18:11:08.192  4990  4990 I RenderThread: type=1400 audit(0.0:828): avc: denied { read } for name="uevent" dev="sysfs" ino=4547 scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:08.192  4990  4990 I RenderThread: type=1400 audit(0.0:829): avc: denied { open } for path="/sys/devices/pci0000:00/0000:00:03.0/uevent" dev="sysfs" ino=4547 scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:08.192  4990  4990 I RenderThread: type=1400 audit(0.0:830): avc: denied { getattr } for path="/sys/devices/pci0000:00/0000:00:03.0/uevent" dev="sysfs" ino=4547 scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:08.201  4990  5072 I MESA    : Using gralloc0 CrOS API
+06-30 18:11:08.218  4990  5032 D FirebaseSessions: Fetched settings: {"settings_version":3,"cache_duration":174293,"features":{"collect_logged_exceptions":true,"collect_reports":true,"collect_analytics":false,"prompt_enabled":false,"push_enabled":false,"firebase_crashlytics_enabled":false,"collect_anrs":true,"collect_metric_kit":false,"collect_build_ids":true},"app":{"status":"activated","update_required":false,"report_upload_variant":2,"native_report_upload_variant":2},"fabric":{"org_id":"67e050aca919a68a8b275039","bundle_id":"eu.depau.etchdroid"},"on_demand_upload_rate_per_minute":10,"on_demand_backoff_base":1.2,"on_demand_backoff_step_duration_seconds":60,"app_quality":{"sessions_enabled":true,"sampling_rate":1,"session_timeout_seconds":1800},"on_demand_thread_recording_suspension_enabled":true}
+06-30 18:11:08.225  4990  5029 D FirebaseSessions: Session Event Type: SESSION_START
+06-30 18:11:08.225  4990  5029 D FirebaseSessions: Successfully logged Session Start event.
+06-30 18:11:08.234  4990  5036 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10282; state: ENABLED
+06-30 18:11:08.260  4990  5072 W EGL-MAIN: failed to get driver name for fd -1
+06-30 18:11:08.261  4990  5072 W EGL-MAIN: MESA-LOADER: failed to retrieve device information
+06-30 18:11:08.262  4990  5072 W EGL-MAIN: failed to get driver name for fd -1
+06-30 18:11:08.264  4990  4990 I RenderThread: type=1400 audit(0.0:831): avc: denied { open } for path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=257 scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:08.272  4990  4990 I RenderThread: type=1400 audit(0.0:832): avc: denied { getattr } for path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=257 scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:08.274  4990  5072 I [minigbm:virtgpu_init(51)]: virtgpu backend not enabling VIRTGPU_PARAM_CREATE_GUEST_HANDLE
+06-30 18:11:08.274  4990  5072 I [minigbm:virtgpu_init(51)]: virtgpu backend not enabling VIRTGPU_PARAM_RESOURCE_SYNC
+06-30 18:11:08.275  4990  5072 I [minigbm:virtgpu_init(51)]: virtgpu backend not enabling VIRTGPU_PARAM_GUEST_VRAM
+06-30 18:11:08.275  4990  5072 I [minigbm:virgl_get_caps(556)]: Supported CAPSET IDs: 6.
+06-30 18:11:08.277  4990  5072 I [minigbm:virgl_add_combination(372)]: Skipping unsupported combination format:842094158
+06-30 18:11:08.278  4990  5072 I [minigbm:virgl_add_combination(372)]: Skipping unsupported combination format:808530000
+06-30 18:11:08.285  4990  5072 E OpenGLRenderer: Device claims wide gamut support, cannot find matching config, error = EGL_SUCCESS
+06-30 18:11:08.285  4990  5072 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+06-30 18:11:08.295  4990  5072 E OpenGLRenderer: Unable to match the desired swap behavior.
+06-30 18:11:08.373   992  1007 I ActivityTaskManager: Displayed eu.depau.etchdroid/.ui.MainActivity: +695ms
+06-30 18:11:08.743   992  1725 W InputManager-JNI: Input channel object 'd5fd7fc Splash Screen eu.depau.etchdroid (client)' was disposed without first being removed with the input manager!
+06-30 18:11:09.430  4990  4990 D tmtry.flow: User clicked on Write an image
+06-30 18:11:09.439  4990  4990 D FirebaseSessions: App backgrounded on eu.depau.etchdroid
+06-30 18:11:10.214   992  1465 D EthernetNetworkFactory: eth0: onNetworkUnneeded for request: NetworkRequest [ REQUEST id=128, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:10.221  4990  5111 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+06-30 18:11:10.221  4990  5111 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+06-30 18:11:10.224  4990  5117 D CCodec  : allocate(c2.android.avc.encoder)
+06-30 18:11:10.225  4990  5117 I Codec2Client: Available Codec2 services: "ffmpeg" "software"
+06-30 18:11:10.220  4990  4990 I CodecLooper: type=1400 audit(0.0:834): avc: denied { call } for scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:r:init:s0 tclass=binder permissive=1 app=eu.depau.etchdroid
+06-30 18:11:10.220  4990  4990 I CodecLooper: type=1400 audit(0.0:836): avc: denied { transfer } for scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:r:init:s0 tclass=binder permissive=1 app=eu.depau.etchdroid
+06-30 18:11:10.266  4990  5117 I CCodec  : Created component [c2.android.avc.encoder]
+06-30 18:11:10.267  4990  5117 D CCodecConfig: read media type: video/avc
+06-30 18:11:10.270  4990  5117 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+06-30 18:11:10.270  4990  5117 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+06-30 18:11:10.271  4990  5117 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+06-30 18:11:10.271  4990  5117 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+06-30 18:11:10.271  4990  5117 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+06-30 18:11:10.271  4990  5117 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+06-30 18:11:10.271  4990  5117 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+06-30 18:11:10.273  4990  5117 D ReflectedParamUpdater: ignored struct field coding.gop.values
+06-30 18:11:10.273  4990  5117 D ReflectedParamUpdater: ignored struct field coding.qp.values
+06-30 18:11:10.274  4990  5117 D CCodecConfig: ignoring local param raw.color (0xc2001809) as it is already supported
+06-30 18:11:10.275  4990  5117 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+06-30 18:11:10.275  4990  5117 D CCodecConfig: c2 config diff is Dict {
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::i32 coded.average-qp.value = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::float coded.frame-rate.value = 1
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.picture-type.value = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.pl.level = 20492
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.pl.profile = 20481
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.vui.color.matrix = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.vui.color.primaries = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.vui.color.range = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coded.vui.color.transfer = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coding.intra-refresh.mode = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::float coding.intra-refresh.period = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 coding.request-sync-frame.value = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 1000000
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 input.delay.value = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   string input.media-type.value = "video/raw"
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   string output.media-type.value = "video/avc"
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 raw.color.matrix = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 raw.color.primaries = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 raw.color.range = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 raw.color.transfer = 0
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 raw.size.height = 16
+06-30 18:11:10.275  4990  5117 D CCodecConfig:   c2::u32 raw.size.width = 16
+06-30 18:11:10.275  4990  5117 D CCodecConfig: }
+06-30 18:11:10.275  4990  5117 W ColorUtils: expected specified color aspects (0:0:0:0)
+06-30 18:11:10.277  4990  5111 D MPEG4Writer: PreAllocation enabled
+06-30 18:11:10.283  4990  5111 D CodecSeeding: Seed: codec c2.android.avc.encoder, mediatype video/avc, overrideable 1
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-bpp,0)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-bpp-1080p,1.90)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-bpp-720p,2.25)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-bpp-540p,2.65)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-bpp-480p,3.00)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-bpp-320x240,0)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-qpmax,-1)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-qpmax-1080p,45)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-qpmax-720p,43)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-qpmax-540p,42)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-target-qpmax-480p,38)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-bitrate-phaseout,1.75)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setTuningValue(vq-boost-missing-qp,0.20)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setFeatureValue(intra-refresh,0)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setFeatureValue(qp-bounds,0)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setFeatureValue(_vq_eligible.device,1)
+06-30 18:11:10.283  4990  5111 D CodecProperties: setFeatureValue(_quality.target,1)
+06-30 18:11:10.283  4990  5111 D CodecSeeding: Seed: codec c2.android.avc.encoder, mediatype video/avc, overrideable 0
+06-30 18:11:10.283  4990  5111 D VQApply : raise bitrate: configured 75000 to floor 1945600
+06-30 18:11:10.283  4990  5111 D VQApply : minquality by QP: inject video-qp-max=45
+06-30 18:11:10.283  4990  5111 D VQApply : minquality/target bitrate raised from 75000 to 1945600 bps
+06-30 18:11:10.283  4990  5111 D MediaCodec: shapeMediaFormat: deltas(6): AMessage(what = 0x00000000) = {
+06-30 18:11:10.283  4990  5111 D MediaCodec:     int32_t bitrate = 1945600
+06-30 18:11:10.283  4990  5111 D MediaCodec:     int32_t android._encoding-quality-level = 0
+06-30 18:11:10.283  4990  5111 D MediaCodec:     int32_t video-qp-max = 45
+06-30 18:11:10.283  4990  5111 D MediaCodec:     int32_t video-qp-i-max = 45
+06-30 18:11:10.283  4990  5111 D MediaCodec:     int32_t video-qp-p-max = 48
+06-30 18:11:10.283  4990  5111 D MediaCodec:     int32_t video-qp-b-max = 51
+06-30 18:11:10.283  4990  5111 D MediaCodec:   }
+06-30 18:11:10.283  4990  5116 D MediaCodec: flushMediametrics
+06-30 18:11:10.284  4990  5117 D CCodec  : [c2.android.avc.encoder] buffers are bound to CCodec for this session
+06-30 18:11:10.285  4990  5117 D CCodecConfig: no c2 equivalents for color-format
+06-30 18:11:10.285  4990  5117 D CCodecConfig: no c2 equivalents for video-qp-max
+06-30 18:11:10.285  4990  5117 D CCodecConfig: no c2 equivalents for video-qp-i-max
+06-30 18:11:10.285  4990  5117 D CCodecConfig: no c2 equivalents for video-qp-p-max
+06-30 18:11:10.285  4990  5117 D CCodecConfig: no c2 equivalents for video-qp-b-max
+06-30 18:11:10.285  4990  5117 D CCodecConfig: no c2 equivalents for flags
+06-30 18:11:10.285  4990  5117 D CCodecConfig: no c2 equivalents for encoder
+06-30 18:11:10.288  4990  5117 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 1945600
+06-30 18:11:10.288  4990  5117 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 6000000
+06-30 18:11:10.288  4990  5117 D CCodecConfig:   c2::u32 raw.size.height = 800
+06-30 18:11:10.288  4990  5117 D CCodecConfig:   c2::u32 raw.size.width = 1280
+06-30 18:11:10.288  4990  5117 W ColorUtils: expected specified color aspects (0:0:0:0)
+06-30 18:11:10.288  4990  5117 D CCodec  : encoding statistics level = 0
+06-30 18:11:10.288  4990  5117 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+06-30 18:11:10.288  4990  5117 D CCodec  :   Rect crop(0, 0, 1279, 799)
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t color-standard = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t color-range = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t color-transfer = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t frame-rate = 1
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t height = 800
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t intra-refresh-period = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   string mime = "video/raw"
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t video-qp-average = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t width = 1280
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t android._dataspace = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t using-sw-read-often = 1
+06-30 18:11:10.288  4990  5117 D CCodec  :   int64_t android._C2MemoryUsage = 1
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t color-format = 2130708361
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t android._color-format = 2130708361
+06-30 18:11:10.288  4990  5117 D CCodec  : }
+06-30 18:11:10.288  4990  5117 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t bitrate = 1945600
+06-30 18:11:10.288  4990  5117 D CCodec  :   Rect crop(0, 0, 1279, 799)
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t color-standard = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t color-range = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t color-transfer = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t frame-rate = 1
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t height = 800
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t intra-refresh-period = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t level = 4096
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t max-bitrate = 1945600
+06-30 18:11:10.288  4990  5117 D CCodec  :   string mime = "video/avc"
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t profile = 65536
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t video-qp-average = 0
+06-30 18:11:10.288  4990  5117 D CCodec  :   int32_t width = 1280
+06-30 18:11:10.288  4990  5117 D CCodec  : }
+06-30 18:11:10.288  4990  5117 I CCodecConfig: query failed after returning 13 values (BAD_INDEX)
+06-30 18:11:10.294  4990  5117 D CCodec  : input format changed to AMessage(what = 0x00000000) = {
+06-30 18:11:10.294  4990  5117 D CCodec  :   Rect crop(0, 0, 1279, 799)
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t color-standard = 1
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t color-range = 2
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t color-transfer = 3
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t frame-rate = 1
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t height = 800
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t intra-refresh-period = 0
+06-30 18:11:10.294  4990  5117 D CCodec  :   string mime = "video/raw"
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t video-qp-average = 0
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t width = 1280
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t android._dataspace = 260
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t using-sw-read-often = 1
+06-30 18:11:10.294  4990  5117 D CCodec  :   int64_t android._C2MemoryUsage = 1
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t color-format = 2130708361
+06-30 18:11:10.294  4990  5117 D CCodec  :   int32_t android._color-format = 2130708361
+06-30 18:11:10.294  4990  5117 D CCodec  : }
+06-30 18:11:10.295  4990  5117 D CCodec  : ISConfig not changed
+06-30 18:11:10.296  4990  5117 W Codec2Client: query -- param skipped: index = 1342179345.
+06-30 18:11:10.296  4990  5117 W Codec2Client: query -- param skipped: index = 2415921170.
+06-30 18:11:10.296  4990  5117 D CCodecBufferChannel: [c2.android.avc.encoder#402] Using basic input block pool with poolID 1 => got 1 - OK (0)
+06-30 18:11:10.296  4990  5117 D C2Store : Using DMABUF Heaps
+06-30 18:11:10.297  4990  5117 I CCodecBufferChannel: [c2.android.avc.encoder#402] Created output block pool with allocatorID 16 => poolID 17 - OK
+06-30 18:11:10.297  4990  5117 D CCodecBufferChannel: [c2.android.avc.encoder#402] Configured output block pool ids 17 => OK
+06-30 18:11:10.403  4990  5072 W Parcel  : Expecting binder but got null!
+06-30 18:11:10.413  4990  5072 D C2OMXNode: dataspace changed to 0x104 pixel format: 0x1
+06-30 18:11:10.421  4990  5072 E HidlServiceManagement: Could not find instance 'default' in library android.hardware.graphics.mapper@4.0-impl.minigbm_gbm_mesa.so. Keeping library open.
+06-30 18:11:10.423  4990  5072 E HidlServiceManagement: Could not find instance 'default' in library android.hardware.graphics.mapper@4.0-impl.minigbm.so. Keeping library open.
+06-30 18:11:10.424  4990  5072 E HidlServiceManagement: Could not find instance 'default' in library android.hardware.graphics.mapper@4.0-impl.minigbm_arcvm.so. Keeping library open.
+06-30 18:11:10.425  4990  5072 E FrameEvents: updateAcquireFence: Did not find frame.
+06-30 18:11:10.485  4990  5121 E CCodec  : Codec2 component "c2.android.avc.encoder" died.
+06-30 18:11:10.486  4990  5116 E MediaCodec: Codec reported err 0xffffffe0/DEAD_OBJECT, actionCode 0, while in state 6/STARTED
+06-30 18:11:10.486  4990  5116 D MediaCodec: flushMediametrics
+06-30 18:11:13.621  4990  5135 D ProfileInstaller: Installing profile for eu.depau.etchdroid
+06-30 18:11:13.677  4990  4990 D CompatibilityChangeReporter: Compat change id reported: 78294732; UID 10282; state: ENABLED
+06-30 18:11:13.697   992  4140 D ConnectivityService: requestNetwork for uid/pid:10282/4990 activeRequest: null callbackRequest: 131 [NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+06-30 18:11:13.698   992  1465 D EthernetNetworkFactory: eth0: onNetworkNeeded for request: NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:13.698   992  1352 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:13.698   992  1352 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:13.698  1784  1784 D PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:13.698   992  1352 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:13.701   992  1017 W BroadcastQueue: Exported Denial: sending Intent { act=android.intent.action.BATTERY_CHANGED flg=0x60000010 (has extras) }, action: android.intent.action.BATTERY_CHANGED from null (uid=-1) due to receiver ProcessRecord{b5e3cc 4990:eu.depau.etchdroid/u0a282} (uid 10282) not specifying RECEIVER_EXPORTED
+06-30 18:11:13.703  4990  4990 D tmtry.flow: User selected file: content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2Fetchdroid_test_accept_notifications_rgfcc8eu.iso
+06-30 18:11:13.705  4990  4990 D tmtry.flow: Opening image: etchdroid_test_accept_notifications_rgfcc8eu.iso
+06-30 18:11:13.705  4990  4990 I tmtry.flow: Only one USB device, opening confirmation activity
+06-30 18:11:13.716   992  4140 I ActivityTaskManager: START u0 {dat=content://com.android.providers.downloads.documents/... flg=0x1 cmp=eu.depau.etchdroid/.ui.ConfirmOperationActivity (has extras)} from uid 10282
+06-30 18:11:13.722  4990  4990 D FirebaseSessions: App foregrounded on eu.depau.etchdroid
+06-30 18:11:13.736  4990  5072 W Parcel  : Expecting binder but got null!
+06-30 18:11:13.763  4990  5072 E OpenGLRenderer: Unable to match the desired swap behavior.
+06-30 18:11:13.785   992  4140 D CoreBackPreview: Window{8bbc474 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@a9d0699, mPriority=-1}
+06-30 18:11:13.786   992  4140 D CoreBackPreview: Window{8bbc474 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@349d5e, mPriority=0}
+06-30 18:11:13.839  4990  5072 E OpenGLRenderer: Unable to match the desired swap behavior.
+06-30 18:11:13.897  4990  4990 D FirebaseSessions: App backgrounded on eu.depau.etchdroid
+06-30 18:11:13.898   992  4140 I ActivityTaskManager: The Process eu.depau.etchdroid Already Exists in BG. So sending its PID: 4990
+06-30 18:11:13.958  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:13.958  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:13.959  4990  4990 I tmtry.flow: Image opened
+06-30 18:11:13.963  4990  4990 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10282; state: ENABLED
+06-30 18:11:13.965  4990  4990 D FirebaseSessions: App foregrounded on eu.depau.etchdroid
+06-30 18:11:13.966  4990  5072 W Parcel  : Expecting binder but got null!
+06-30 18:11:13.973   992  2393 D CoreBackPreview: Window{b72b80d u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ConfirmOperationActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@adb65d3, mPriority=-1}
+06-30 18:11:14.050  4990  5072 E OpenGLRenderer: Unable to match the desired swap behavior.
+06-30 18:11:14.115  4990  4990 I System.out: hasUsbPermission: false
+06-30 18:11:14.118   992  1007 I ActivityTaskManager: Displayed eu.depau.etchdroid/.ui.ConfirmOperationActivity: +401ms
+06-30 18:11:15.106  4990  4990 I tmtry.usb: Requesting USB permission: UsbMassStorageDeviceDescriptor(maybeUsbDevice=UsbDevice[mName=/dev/bus/usb/004/002,mVendorId=18164,mProductId=1,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=QEMU,mProductName=QEMU USB HARDDRIVE,mVersion=0.00,mSerialNumberReader=android.hardware.usb.IUsbSerialReader$Stub$Proxy@583bc3d, mHasAudioPlayback=false, mHasAudioCapture=false, mHasMidi=false, mHasVideoCapture=false, mHasVideoPlayback=false, mConfigurations=[
+06-30 18:11:15.106  4990  4990 I tmtry.usb: UsbConfiguration[mId=1,mName=Super speed config (usb 3.0),mAttributes=192,mMaxPower=0,mInterfaces=[
+06-30 18:11:15.106  4990  4990 I tmtry.usb: UsbInterface[mId=0,mAlternateSetting=0,mName=null,mClass=8,mSubclass=6,mProtocol=80,mEndpoints=[
+06-30 18:11:15.106  4990  4990 I tmtry.usb: UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=1024,mInterval=0]
+06-30 18:11:15.106  4990  4990 I tmtry.usb: UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=1024,mInterval=0]]]], usbInterface=UsbInterface[mId=0,mAlternateSetting=0,mName=null,mClass=8,mSubclass=6,mProtocol=80,mEndpoints=[
+06-30 18:11:15.106  4990  4990 I tmtry.usb: UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=1024,mInterval=0]
+06-30 18:11:15.106  4990  4990 I tmtry.usb: UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=1024,mInterval=0]], inEndpoint=UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=1024,mInterval=0], outEndpoint=UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=1024,mInterval=0], previewUsbDevice=null)
+06-30 18:11:15.108  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:15.108  4990  4990 W ConfirmOperationActivit: Received USB broadcast without device, using selected device: Intent { act=eu.depau.etchdroid.action.USB_PERMISSION flg=0x10 }
+06-30 18:11:15.108  4990  4990 I tmtry.usb: Received USB broadcast: eu.depau.etchdroid.action.USB_PERMISSION, device: UsbDevice[mName=/dev/bus/usb/004/002,mVendorId=18164,mProductId=1,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=QEMU,mProductName=QEMU USB HARDDRIVE,mVersion=0.00,mSerialNumberReader=android.hardware.usb.IUsbSerialReader$Stub$Proxy@583bc3d, mHasAudioPlayback=false, mHasAudioCapture=false, mHasMidi=false, mHasVideoCapture=false, mHasVideoPlayback=false, mConfigurations=[
+06-30 18:11:15.108  4990  4990 I tmtry.usb: UsbConfiguration[mId=1,mName=Super speed config (usb 3.0),mAttributes=192,mMaxPower=0,mInterfaces=[
+06-30 18:11:15.108  4990  4990 I tmtry.usb: UsbInterface[mId=0,mAlternateSetting=0,mName=null,mClass=8,mSubclass=6,mProtocol=80,mEndpoints=[
+06-30 18:11:15.108  4990  4990 I tmtry.usb: UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=1024,mInterval=0]
+06-30 18:11:15.108  4990  4990 I tmtry.usb: UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=1024,mInterval=0]]]]
+06-30 18:11:15.109  4990  4990 I tmtry.usb: USB permission granted: true
+06-30 18:11:15.121  4990  4990 I System.out: hasUsbPermission: true
+06-30 18:11:15.149  4990  4990 W Choreographer: Frame time is 0.063134 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+06-30 18:11:17.038  4990  5153 W LOTTIE  : Lottie doesn't support layer effects. If you are using them for  fills, strokes, trim paths etc. then try adding them directly as contents  in your shape. Found: []
+06-30 18:11:17.045  4990  5072 W Parcel  : Expecting binder but got null!
+06-30 18:11:17.056   992  1502 D CoreBackPreview: Window{59adc7a u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ConfirmOperationActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@d850534, mPriority=-1}
+06-30 18:11:17.056   992  1502 D CoreBackPreview: Window{59adc7a u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ConfirmOperationActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@3713f5d, mPriority=0}
+06-30 18:11:17.082  4990  5072 E OpenGLRenderer: Unable to match the desired swap behavior.
+06-30 18:11:17.101  4990  4990 I System.out: hasUsbPermission: true
+06-30 18:11:17.935  4990  5013 D MediaCodec: flushMediametrics
+06-30 18:11:17.936  4990  5013 W System  : A resource failed to call release. 
+06-30 18:11:17.936  4990  5013 D MPEG4Writer: reset()
+06-30 18:11:17.936  4990  5013 D MPEG4Writer: release()
+06-30 18:11:17.936  4990  5013 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:0 mOffset:0 mMdatEndOffset:0 diff:0
+06-30 18:11:17.936  4990  5013 D MPEG4Writer: final fsync() takes 0 ms, file size 0
+06-30 18:11:17.936  4990  5013 W System  : A resource failed to call Surface.release. 
+06-30 18:11:18.316  4990  4990 W Choreographer: Frame time is 0.022561999 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+06-30 18:11:18.579  4990  4990 I System.out: onReady
+06-30 18:11:18.584  4990  4990 I System.out: writeImage content://com.android.providers.downloads.documents/document/raw%3A%2Fstorage%2Femulated%2F0%2FDownload%2Fetchdroid_test_accept_notifications_rgfcc8eu.iso, UsbMassStorageDeviceDescriptor(maybeUsbDevice=UsbDevice[mName=/dev/bus/usb/004/002,mVendorId=18164,mProductId=1,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=QEMU,mProductName=QEMU USB HARDDRIVE,mVersion=0.00,mSerialNumberReader=android.hardware.usb.IUsbSerialReader$Stub$Proxy@583bc3d, mHasAudioPlayback=false, mHasAudioCapture=false, mHasMidi=false, mHasVideoCapture=false, mHasVideoPlayback=false, mConfigurations=[
+06-30 18:11:18.584  4990  4990 I System.out: UsbConfiguration[mId=1,mName=Super speed config (usb 3.0),mAttributes=192,mMaxPower=0,mInterfaces=[
+06-30 18:11:18.584  4990  4990 I System.out: UsbInterface[mId=0,mAlternateSetting=0,mName=null,mClass=8,mSubclass=6,mProtocol=80,mEndpoints=[
+06-30 18:11:18.584  4990  4990 I System.out: UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=1024,mInterval=0]
+06-30 18:11:18.584  4990  4990 I System.out: UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=1024,mInterval=0]]]], usbInterface=UsbInterface[mId=0,mAlternateSetting=0,mName=null,mClass=8,mSubclass=6,mProtocol=80,mEndpoints=[
+06-30 18:11:18.584  4990  4990 I System.out: UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=1024,mInterval=0]
+06-30 18:11:18.584  4990  4990 I System.out: UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=1024,mInterval=0]], inEndpoint=UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=1024,mInterval=0], outEndpoint=UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=1024,mInterval=0], previewUsbDevice=null)
+06-30 18:11:18.585  4990  4990 I tmtry.flow: Starting worker service; job ID: -1739304313
+06-30 18:11:18.592   992  1502 I ActivityTaskManager: START u0 {act=eu.depau.etchdroid.broadcast.JOB_PROGRESS flg=0x1 cmp=eu.depau.etchdroid/.ui.ProgressActivity (has extras)} from uid 10282
+06-30 18:11:18.614  4990  4990 I System.out: WorkerService created
+06-30 18:11:18.621  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:18.622  4990  4990 E tmtry.EtchDroid: Typed getParcelableExtra('destDevice') failed, falling back to untyped
+06-30 18:11:18.631  4990  5111 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+06-30 18:11:18.632  4990  5111 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+06-30 18:11:18.633  4990  5158 D CCodec  : allocate(c2.android.avc.encoder)
+06-30 18:11:18.633  4990  5158 E Codec2Client: createComponent(c2.android.avc.encoder) -- transaction failed.
+06-30 18:11:18.633  4990  5158 W Codec2Client: "create:c2.android.avc.encoder" failed for service "android.componentStore.platform" due to transaction failure. (Service may have crashed.) Retrying...
+06-30 18:11:18.641  4990  4990 I tmtry.worker: Starting worker service for job -1739304313: 'etchdroid_test_accept_notifications_rgfcc8eu.iso' -> 'QEMU QEMU USB HARDDRIVE' (offset: 0.0 B)
+06-30 18:11:18.651  4990  5067 D TrafficStats: tagSocket(5) with statsTag=0xf001, statsUid=-1
+06-30 18:11:18.661  4990  4990 D FirebaseSessions: App backgrounded on eu.depau.etchdroid
+06-30 18:11:18.662   992  4140 I ActivityTaskManager: The Process eu.depau.etchdroid Already Exists in BG. So sending its PID: 4990
+06-30 18:11:18.665  4990  5041 D tmtry.worker: Job coroutine scope started; thread WorkerService coroutine scope (41)
+06-30 18:11:18.665  4990  5041 D tmtry.worker: Building USB mass storage device
+06-30 18:11:18.749  4990  5158 I CCodec  : Created component [c2.android.avc.encoder]
+06-30 18:11:18.749  4990  5158 D CCodecConfig: read media type: video/avc
+06-30 18:11:18.750  4990  5158 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+06-30 18:11:18.751  4990  5158 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+06-30 18:11:18.751  4990  5158 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+06-30 18:11:18.751  4990  5158 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+06-30 18:11:18.751  4990  5158 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+06-30 18:11:18.751  4990  5158 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+06-30 18:11:18.751  4990  5158 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+06-30 18:11:18.755  4990  5158 D ReflectedParamUpdater: ignored struct field coding.gop.values
+06-30 18:11:18.755  4990  5158 D ReflectedParamUpdater: ignored struct field coding.qp.values
+06-30 18:11:18.756  4990  5158 D CCodecConfig: ignoring local param raw.color (0xc2001809) as it is already supported
+06-30 18:11:18.757  4990  5158 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+06-30 18:11:18.757  4990  5158 D CCodecConfig: c2 config diff is Dict {
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::i32 coded.average-qp.value = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::float coded.frame-rate.value = 1
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.picture-type.value = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.pl.level = 20492
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.pl.profile = 20481
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.vui.color.matrix = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.vui.color.primaries = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.vui.color.range = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coded.vui.color.transfer = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coding.intra-refresh.mode = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::float coding.intra-refresh.period = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 coding.request-sync-frame.value = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 1000000
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 input.delay.value = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   string input.media-type.value = "video/raw"
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   string output.media-type.value = "video/avc"
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 raw.color.matrix = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 raw.color.primaries = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 raw.color.range = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 raw.color.transfer = 0
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 raw.size.height = 16
+06-30 18:11:18.757  4990  5158 D CCodecConfig:   c2::u32 raw.size.width = 16
+06-30 18:11:18.757  4990  5158 D CCodecConfig: }
+06-30 18:11:18.757  4990  4990 I System.out: ProgressActivity running in thread main (2)
+06-30 18:11:18.757  4990  5158 W ColorUtils: expected specified color aspects (0:0:0:0)
+06-30 18:11:18.758  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:18.759  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:18.759  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, -1%, verifying: false
+06-30 18:11:18.759  4990  5111 D MPEG4Writer: PreAllocation enabled
+06-30 18:11:18.759  4990  5111 D VQApply : raise bitrate: configured 75000 to floor 1945600
+06-30 18:11:18.759  4990  5111 D VQApply : minquality by QP: inject video-qp-max=45
+06-30 18:11:18.759  4990  5111 D VQApply : minquality/target bitrate raised from 75000 to 1945600 bps
+06-30 18:11:18.759  4990  5111 D MediaCodec: shapeMediaFormat: deltas(6): AMessage(what = 0x00000000) = {
+06-30 18:11:18.759  4990  5111 D MediaCodec:     int32_t bitrate = 1945600
+06-30 18:11:18.759  4990  5111 D MediaCodec:     int32_t android._encoding-quality-level = 0
+06-30 18:11:18.759  4990  5111 D MediaCodec:     int32_t video-qp-max = 45
+06-30 18:11:18.759  4990  5111 D MediaCodec:     int32_t video-qp-i-max = 45
+06-30 18:11:18.759  4990  5111 D MediaCodec:     int32_t video-qp-p-max = 48
+06-30 18:11:18.759  4990  5111 D MediaCodec:     int32_t video-qp-b-max = 51
+06-30 18:11:18.759  4990  5111 D MediaCodec:   }
+06-30 18:11:18.760  4990  5157 D MediaCodec: flushMediametrics
+06-30 18:11:18.761  4990  5158 D CCodec  : [c2.android.avc.encoder] buffers are bound to CCodec for this session
+06-30 18:11:18.760  4990  4990 I eu.depau.etchdroid: type=1400 audit(0.0:843): avc: denied { read } for comm=576F726B6572536572766963652063 name="usb" dev="tmpfs" ino=299 scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:object_r:usb_device:s0 tclass=dir permissive=1 app=eu.depau.etchdroid
+06-30 18:11:18.760  4990  4990 I eu.depau.etchdroid: type=1400 audit(0.0:844): avc: denied { open } for comm=576F726B6572536572766963652063 path="/dev/bus/usb" dev="tmpfs" ino=299 scontext=u:r:untrusted_app:s0:c26,c257,c512,c768 tcontext=u:object_r:usb_device:s0 tclass=dir permissive=1 app=eu.depau.etchdroid
+06-30 18:11:18.766  4990  5041 D native_libusbcom: jint Java_me_jahnen_libaums_libusbcommunication_LibusbCommunication_nativeInit(JNIEnv *, jobject, jint, jlongArray):11 init native libusb
+06-30 18:11:18.775  4990  5158 D CCodecConfig: no c2 equivalents for color-format
+06-30 18:11:18.775  4990  5158 D CCodecConfig: no c2 equivalents for video-qp-max
+06-30 18:11:18.775  4990  5158 D CCodecConfig: no c2 equivalents for video-qp-i-max
+06-30 18:11:18.775  4990  5158 D CCodecConfig: no c2 equivalents for video-qp-p-max
+06-30 18:11:18.775  4990  5158 D CCodecConfig: no c2 equivalents for video-qp-b-max
+06-30 18:11:18.775  4990  5158 D CCodecConfig: no c2 equivalents for flags
+06-30 18:11:18.775  4990  5158 D CCodecConfig: no c2 equivalents for encoder
+06-30 18:11:18.775  4990  4990 D FirebaseSessions: App foregrounded on eu.depau.etchdroid
+06-30 18:11:18.776  4990  5158 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 1945600
+06-30 18:11:18.776  4990  5158 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 6000000
+06-30 18:11:18.776  4990  5158 D CCodecConfig:   c2::u32 raw.size.height = 800
+06-30 18:11:18.776  4990  5158 D CCodecConfig:   c2::u32 raw.size.width = 1280
+06-30 18:11:18.776  4990  5158 W ColorUtils: expected specified color aspects (0:0:0:0)
+06-30 18:11:18.785  4990  5158 D CCodec  : encoding statistics level = 0
+06-30 18:11:18.785  4990  5158 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+06-30 18:11:18.785  4990  5158 D CCodec  :   Rect crop(0, 0, 1279, 799)
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t color-standard = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t color-range = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t color-transfer = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t frame-rate = 1
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t height = 800
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t intra-refresh-period = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   string mime = "video/raw"
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t video-qp-average = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t width = 1280
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t android._dataspace = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t using-sw-read-often = 1
+06-30 18:11:18.785  4990  5158 D CCodec  :   int64_t android._C2MemoryUsage = 1
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t color-format = 2130708361
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t android._color-format = 2130708361
+06-30 18:11:18.785  4990  5158 D CCodec  : }
+06-30 18:11:18.785  4990  5158 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t bitrate = 1945600
+06-30 18:11:18.785  4990  5158 D CCodec  :   Rect crop(0, 0, 1279, 799)
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t color-standard = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t color-range = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t color-transfer = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t frame-rate = 1
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t height = 800
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t intra-refresh-period = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t level = 4096
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t max-bitrate = 1945600
+06-30 18:11:18.785  4990  5158 D CCodec  :   string mime = "video/avc"
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t profile = 65536
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t video-qp-average = 0
+06-30 18:11:18.785  4990  5158 D CCodec  :   int32_t width = 1280
+06-30 18:11:18.785  4990  5158 D CCodec  : }
+06-30 18:11:18.785  4990  5158 I CCodecConfig: query failed after returning 13 values (BAD_INDEX)
+06-30 18:11:18.788  4990  5158 D CCodec  : input format changed to AMessage(what = 0x00000000) = {
+06-30 18:11:18.788  4990  5158 D CCodec  :   Rect crop(0, 0, 1279, 799)
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t color-standard = 1
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t color-range = 2
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t color-transfer = 3
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t frame-rate = 1
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t height = 800
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t intra-refresh-period = 0
+06-30 18:11:18.788  4990  5158 D CCodec  :   string mime = "video/raw"
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t video-qp-average = 0
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t width = 1280
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t android._dataspace = 260
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t using-sw-read-often = 1
+06-30 18:11:18.788  4990  5158 D CCodec  :   int64_t android._C2MemoryUsage = 1
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t color-format = 2130708361
+06-30 18:11:18.788  4990  5158 D CCodec  :   int32_t android._color-format = 2130708361
+06-30 18:11:18.788  4990  5158 D CCodec  : }
+06-30 18:11:18.789  4990  5158 D CCodec  : ISConfig not changed
+06-30 18:11:18.796  4990  5158 W Codec2Client: query -- param skipped: index = 1342179345.
+06-30 18:11:18.796  4990  5158 W Codec2Client: query -- param skipped: index = 2415921170.
+06-30 18:11:18.803  4990  5072 W Parcel  : Expecting binder but got null!
+06-30 18:11:18.807  4990  5158 D CCodecBufferChannel: [c2.android.avc.encoder#564] Using basic input block pool with poolID 1 => got 1 - OK (0)
+06-30 18:11:18.810  4990  5158 I CCodecBufferChannel: [c2.android.avc.encoder#564] Created output block pool with allocatorID 16 => poolID 17 - OK
+06-30 18:11:18.812  4990  5158 D CCodecBufferChannel: [c2.android.avc.encoder#564] Configured output block pool ids 17 => OK
+06-30 18:11:18.813   992  4140 D CoreBackPreview: Window{7cd5585 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ProgressActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@4b02c0b, mPriority=-1}
+06-30 18:11:18.838  4990  4990 I tmtry.notifications: User dismissed notifications banner
+06-30 18:11:18.842  4990  4990 I tmtry.notifications: User requested notifications
+06-30 18:11:18.888   992  4140 D CoreBackPreview: Window{7cd5585 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ProgressActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@94a5fa6, mPriority=0}
+06-30 18:11:18.995  4990  5072 W Parcel  : Expecting binder but got null!
+06-30 18:11:18.995  4990  5072 E OpenGLRenderer: Unable to match the desired swap behavior.
+06-30 18:11:19.023  4990  5072 D C2OMXNode: dataspace changed to 0x104 pixel format: 0x1
+06-30 18:11:19.024  4990  5072 E FrameEvents: updateAcquireFence: Did not find frame.
+06-30 18:11:19.106   992  1007 I ActivityTaskManager: Displayed eu.depau.etchdroid/.ui.ProgressActivity: +492ms
+06-30 18:11:19.124  4990  5121 E CCodec  : Codec2 component "c2.android.avc.encoder" died.
+06-30 18:11:19.124  4990  5157 E MediaCodec: Codec reported err 0xffffffe0/DEAD_OBJECT, actionCode 0, while in state 6/STARTED
+06-30 18:11:19.124  4990  5157 D MediaCodec: flushMediametrics
+06-30 18:11:19.140  4990  5072 E FrameEvents: updateAcquireFence: Did not find frame.
+06-30 18:11:19.145  4990  5169 E Codec2Client: queue -- transaction failed.
+06-30 18:11:19.203  4990  5072 E FrameEvents: updateAcquireFence: Did not find frame.
+06-30 18:11:19.215  4990  5169 E Codec2Client: queue -- transaction failed.
+06-30 18:11:19.244  4990  5072 E FrameEvents: updateAcquireFence: Did not find frame.
+06-30 18:11:19.248  4990  5067 D TrafficStats: tagSocket(141) with statsTag=0xf001, statsUid=-1
+06-30 18:11:19.268  4990  5169 E Codec2Client: queue -- transaction failed.
+06-30 18:11:19.630   992  4140 D CoreBackPreview: Window{59adc7a u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ConfirmOperationActivity}: Setting back callback null
+06-30 18:11:19.632   992  2393 W InputManager-JNI: Input channel object '59adc7a eu.depau.etchdroid/eu.depau.etchdroid.ui.ConfirmOperationActivity (client)' was disposed without first being removed with the input manager!
+06-30 18:11:19.647   992  2393 D CoreBackPreview: Window{b72b80d u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ConfirmOperationActivity}: Setting back callback null
+06-30 18:11:19.654   992  4140 W InputManager-JNI: Input channel object 'b72b80d eu.depau.etchdroid/eu.depau.etchdroid.ui.ConfirmOperationActivity (client)' was disposed without first being removed with the input manager!
+06-30 18:11:20.396  4990  5041 D UsbMassStorageDevice: Max LUN 0
+06-30 18:11:20.398  4990  5041 D ScsiBlockDevice: inquiry response: ScsiInquiryResponse [peripheralQualifier=0, peripheralDeviceType=0, removableMedia=false, spcVersion=5, responseDataFormat=2]
+06-30 18:11:20.401  4990  5041 I ScsiBlockDevice: Block size: 512
+06-30 18:11:20.402  4990  5041 I ScsiBlockDevice: Last block address: 4194303
+06-30 18:11:20.402  4990  5041 D tmtry.worker: Device size: 2.0 GiB (block size: 512.0 B, num blocks: 4194303)
+06-30 18:11:20.425  4990  5041 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:20.425  4990  5041 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:20.425  4990  5041 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 0%, verifying: false
+06-30 18:11:20.453  4990  5041 I tmtry.worker: Writing image to USB drive
+06-30 18:11:20.480  4990  5013 W System  : A resource failed to call end. 
+06-30 18:11:20.480  4990  5013 W System  : A resource failed to call Surface.release. 
+06-30 18:11:20.518  4990  5013 W System  : A resource failed to call end. 
+06-30 18:11:20.518  4990  5013 W System  : A resource failed to call release. 
+06-30 18:11:20.518  4990  5013 D MPEG4Writer: reset()
+06-30 18:11:20.518  4990  5013 D MPEG4Writer: release()
+06-30 18:11:20.518  4990  5013 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:0 mOffset:0 mMdatEndOffset:0 diff:0
+06-30 18:11:20.518  4990  5013 D MPEG4Writer: final fsync() takes 0 ms, file size 0
+06-30 18:11:20.519  4990  5013 D MediaCodec: flushMediametrics
+06-30 18:11:20.519  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:20.519  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:20.519  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 0%, verifying: false
+06-30 18:11:21.080  4990  4990 I tmtry.notifications: Requesting notifications runtime permission
+06-30 18:11:21.113  4990  4990 D FirebaseSessions: App backgrounded on eu.depau.etchdroid
+06-30 18:11:21.364  4990  5011 I depau.etchdroid: Background young concurrent copying GC freed 9261(599KB) AllocSpace objects, 26(22MB) LOS objects, 47% free, 25MB/48MB, paused 6.500ms,16us total 26.940ms
+06-30 18:11:22.169  1518  1518 V GrantPermissionsViewModel: Logged buttons presented and clicked permissionGroupName=android.permission-group.NOTIFICATIONS uid=10282 selectedLocations=0 package=eu.depau.etchdroid presentedButtons=9 clickedButton=1 sessionId=1868999070614912339 targetSdk=36
+06-30 18:11:22.190  1518  1518 V GrantPermissionsViewModel: Permission grant result requestId=1868999070614912339 callingUid=10282 callingPackage=eu.depau.etchdroid permission=android.permission.POST_NOTIFICATIONS isImplicit=false result=4
+06-30 18:11:22.270  4990  4990 I tmtry.notifications: Notifications permission granted: true
+06-30 18:11:22.271  4990  4990 D FirebaseSessions: App foregrounded on eu.depau.etchdroid
+06-30 18:11:22.565  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:22.565  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:22.566  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:22.566  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:22.566  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 17%, verifying: false
+06-30 18:11:23.581  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:23.581  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:23.583  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:23.583  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:23.583  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 26%, verifying: false
+06-30 18:11:23.678  4990  5011 I depau.etchdroid: Background young concurrent copying GC freed 9896(511KB) AllocSpace objects, 22(20MB) LOS objects, 39% free, 28MB/47MB, paused 13.725ms,17us total 30.475ms
+06-30 18:11:24.575  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:24.575  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:24.577  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:24.577  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:24.577  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 35%, verifying: false
+06-30 18:11:25.608  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:25.608  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:25.610  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:25.610  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:25.610  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 45%, verifying: false
+06-30 18:11:25.947  4990  5011 I depau.etchdroid: Background young concurrent copying GC freed 16525(731KB) AllocSpace objects, 23(21MB) LOS objects, 38% free, 30MB/49MB, paused 14.991ms,18us total 53.922ms
+06-30 18:11:26.581  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:26.582  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:26.583  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:26.583  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:26.583  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 53%, verifying: false
+06-30 18:11:27.640  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:27.640  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:27.643  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:27.644  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:27.644  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 65%, verifying: false
+06-30 18:11:28.660  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:28.660  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:28.662  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:28.662  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:28.662  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 74%, verifying: false
+06-30 18:11:29.635  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:29.635  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:29.643  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:29.643  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:29.643  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 83%, verifying: false
+06-30 18:11:30.017  4990  4990 W Choreographer: Frame time is 0.04671 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+06-30 18:11:30.695  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:30.695  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:30.700  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:30.700  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:30.700  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 92%, verifying: false
+06-30 18:11:31.112  4990  5011 I depau.etchdroid: Background young concurrent copying GC freed 7922(361KB) AllocSpace objects, 24(24MB) LOS objects, 49% free, 24MB/48MB, paused 8.647ms,56us total 25.552ms
+06-30 18:11:31.328  4990  4990 W Choreographer: Frame time is 0.182747 ms in the future!  Check that graphics HAL is generating vsync timestamps using the correct timebase.
+06-30 18:11:31.461  4990  5041 I tmtry.worker: Verifying image on USB drive
+06-30 18:11:31.667  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:31.677  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:31.684  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:31.684  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:31.689  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 1%, verifying: true
+06-30 18:11:32.653  4990  4990 I tmtry.flow: User skipped verification
+06-30 18:11:32.698  4990  5178 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.698  4990  5178 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.700  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.700  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.700  4990  5178 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.700  4990  5178 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.700  4990  5178 I tmtry.job_broadcast: [-1] Job progress notification: eu.depau.etchdroid.broadcast.FINISHED, 100%, verifying: false
+06-30 18:11:32.701  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.701  4990  4990 D KTexts  : Value is of type class java.lang.Class (Kotlin reflection is not available)
+06-30 18:11:32.701  4990  4990 D tmtry.job_broadcast: [-1739304313] Job progress notification: eu.depau.etchdroid.broadcast.JOB_PROGRESS, 7%, verifying: true
+06-30 18:11:32.729  4990  5178 D native_libusbcom: void Java_me_jahnen_libaums_libusbcommunication_LibusbCommunication_nativeClose(JNIEnv *, jobject, jlong, jint):52 close native libusb
+06-30 18:11:32.741  4990  5178 D UsbDeviceConnectionJNI: close
+06-30 18:11:32.886  4990  5040 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 in tid 5040 (BlockDeviceOutp), pid 4990 (depau.etchdroid)
+06-30 18:11:32.902   992   992 I NotificationService: Cannot find enqueued record for key: 0|eu.depau.etchdroid|615261587|null|10282
+06-30 18:11:33.444  5195  5195 I crash_dump64: type=1400 audit(0.0:865): avc: denied { read } for name="data@resource-cache@com.android.systemui-accent-ym2c.frro@idmap" dev="tmpfs" ino=3917 scontext=u:r:crash_dump:s0:c26,c257,c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:33.444  5195  5195 I crash_dump64: type=1400 audit(0.0:866): avc: denied { open } for path="/data/resource-cache/data@resource-cache@com.android.systemui-accent-ym2c.frro@idmap" dev="tmpfs" ino=3917 scontext=u:r:crash_dump:s0:c26,c257,c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:33.444  5195  5195 I crash_dump64: type=1400 audit(0.0:867): avc: denied { getattr } for path="/data/resource-cache/data@resource-cache@com.android.systemui-accent-ym2c.frro@idmap" dev="tmpfs" ino=3917 scontext=u:r:crash_dump:s0:c26,c257,c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:33.444  5195  5195 I crash_dump64: type=1400 audit(0.0:868): avc: denied { map } for path="/data/resource-cache/data@resource-cache@com.android.systemui-accent-ym2c.frro@idmap" dev="tmpfs" ino=3917 scontext=u:r:crash_dump:s0:c26,c257,c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=eu.depau.etchdroid
+06-30 18:11:33.476  5195  5195 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+06-30 18:11:33.476  5195  5195 F DEBUG   : Build fingerprint: 'Android-x86/bliss_x86_64/x86_64:13/TQ3A.230901.001.C1/151:userdebug/test-keys'
+06-30 18:11:33.476  5195  5195 F DEBUG   : Revision: '0'
+06-30 18:11:33.476  5195  5195 F DEBUG   : ABI: 'x86_64'
+06-30 18:11:33.476  5195  5195 F DEBUG   : Timestamp: 2026-06-30 18:11:33.081218435+0000
+06-30 18:11:33.476  5195  5195 F DEBUG   : Process uptime: 26s
+06-30 18:11:33.476  5195  5195 F DEBUG   : Cmdline: eu.depau.etchdroid
+06-30 18:11:33.476  5195  5195 F DEBUG   : pid: 4990, tid: 5040, name: BlockDeviceOutp  >>> eu.depau.etchdroid <<<
+06-30 18:11:33.476  5195  5195 F DEBUG   : uid: 10282
+06-30 18:11:33.476  5195  5195 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000000
+06-30 18:11:33.476  5195  5195 F DEBUG   : Cause: null pointer dereference
+06-30 18:11:33.476  5195  5195 F DEBUG   :     rax 0000000000000000  rbx 00000000ffffffff  rcx 0000000000000000  rdx 0000000000000002
+06-30 18:11:33.476  5195  5195 F DEBUG   :     r8  0000000000000000  r9  00000000ffffffff  r10 0000000000000000  r11 0000000000000246
+06-30 18:11:33.476  5195  5195 F DEBUG   :     r12 00007b0ab70fbf10  r13 0000000000001388  r14 00007b0b87106040  r15 00007b0b57174630
+06-30 18:11:33.476  5195  5195 F DEBUG   :     rdi 00007b0d4fb9f238  rsi 0000000000000089
+06-30 18:11:33.476  5195  5195 F DEBUG   :     rbp 0000000000000000  rsp 00007b0a40e6a1f0  rip 00007b0a3185692a
+06-30 18:11:33.476  5195  5195 F DEBUG   : backtrace:
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #00 pc 000000000001292a  /data/app/~~gpkqobne8jSX7Fp4U6w5TQ==/eu.depau.etchdroid--cELOi8YEJ7C23gNJXG_Iw==/base.apk!liblibusb.so (offset 0x4d8000) (libusb_submit_transfer+538) (BuildId: 93941e196e97f2aa7816e2ebd8371be007f78dae)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #01 pc 0000000000014920  /data/app/~~gpkqobne8jSX7Fp4U6w5TQ==/eu.depau.etchdroid--cELOi8YEJ7C23gNJXG_Iw==/base.apk!liblibusb.so (offset 0x4d8000) (BuildId: 93941e196e97f2aa7816e2ebd8371be007f78dae)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #02 pc 000000000001486c  /data/app/~~gpkqobne8jSX7Fp4U6w5TQ==/eu.depau.etchdroid--cELOi8YEJ7C23gNJXG_Iw==/base.apk!liblibusb.so (offset 0x4d8000) (libusb_bulk_transfer+12) (BuildId: 93941e196e97f2aa7816e2ebd8371be007f78dae)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #03 pc 000000000000165b  /data/app/~~gpkqobne8jSX7Fp4U6w5TQ==/eu.depau.etchdroid--cELOi8YEJ7C23gNJXG_Iw==/base.apk!liblibusbcom.so (offset 0x4f8000) (Java_me_jahnen_libaums_libusbcommunication_LibusbCommunication_nativeBulkTransfer+91) (BuildId: 72f4b38f9a357d7d4ab0615407e97608c07dc324)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #04 pc 000000000037d88b  /apex/com.android.art/lib64/libart.so (art_quick_generic_jni_trampoline+219) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #05 pc 00000000020f83b9  /memfd:jit-cache (deleted) (offset 0x2000000) (me.jahnen.libaums.libusbcommunication.LibusbCommunication.bulkInTransfer+409)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #06 pc 00000000020c8eea  /memfd:jit-cache (deleted) (offset 0x2000000) (me.jahnen.libaums.core.driver.scsi.ScsiBlockDevice.transferOneCommand+1722)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #07 pc 0000000000369c6d  /apex/com.android.art/lib64/libart.so (nterp_helper+3837) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #08 pc 00000000003561fa  /data/app/~~gpkqobne8jSX7Fp4U6w5TQ==/eu.depau.etchdroid--cELOi8YEJ7C23gNJXG_Iw==/oat/x86_64/base.vdex (me.jahnen.libaums.core.driver.scsi.ScsiBlockDevice.transferCommand+14)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #09 pc 0000000000369c08  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #10 pc 0000000000356188  /data/app/~~gpkqobne8jSX7Fp4U6w5TQ==/eu.depau.etchdroid--cELOi8YEJ7C23gNJXG_Iw==/oat/x86_64/base.vdex (me.jahnen.libaums.core.driver.scsi.ScsiBlockDevice.read+80)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #11 pc 0000000000369c08  /apex/com.android.art/lib64/libart.so (nterp_helper+3736) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #12 pc 00000000000fd70e  /data/app/~~gpkqobne8jSX7Fp4U6w5TQ==/eu.depau.etchdroid--cELOi8YEJ7C23gNJXG_Iw==/oat/x86_64/base.vdex (androidx.compose.foundation.gestures.ScrollableKt$semanticsScrollBy$2.invokeSuspend+462)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #13 pc 000000000205ef41  /memfd:jit-cache (deleted) (offset 0x2000000) (kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith+209)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #14 pc 0000000002039a90  /memfd:jit-cache (deleted) (offset 0x2000000) (kotlinx.coroutines.DispatchedTask.run+1232)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #15 pc 000000000205d203  /memfd:jit-cache (deleted) (offset 0x2000000) (com.google.android.gms.tasks.zzc.run+195)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #16 pc 0000000002095ffb  /memfd:jit-cache (deleted) (offset 0x2000000) (kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run+4603)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #17 pc 0000000000372744  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+756) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #18 pc 00000000003ef1b6  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+214) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #19 pc 0000000000836749  /apex/com.android.art/lib64/libart.so (art::(anonymous namespace)::InvokeWithArgArray(art::ScopedObjectAccessAlreadyRunnable const&, art::ArtMethod*, art::(anonymous namespace)::ArgArray*, art::JValue*, char const*)+89) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #20 pc 0000000000837af4  /apex/com.android.art/lib64/libart.so (art::JValue art::InvokeVirtualOrInterfaceWithJValues<art::ArtMethod*>(art::ScopedObjectAccessAlreadyRunnable const&, _jobject*, art::ArtMethod*, jvalue const*)+452) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #21 pc 00000000008936a2  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+1746) (BuildId: 4a6216871c78ffd3d846b3e17bc4fef4)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #22 pc 00000000000ccd8a  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+58) (BuildId: 1b2a39e43caba588eb8ce2a331dc4eef)
+06-30 18:11:33.476  5195  5195 F DEBUG   :       #23 pc 0000000000060cd7  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+55) (BuildId: 1b2a39e43caba588eb8ce2a331dc4eef)
+06-30 18:11:33.495   992  5208 W ActivityTaskManager:   Force finishing activity eu.depau.etchdroid/.ui.ProgressActivity
+06-30 18:11:33.535   992  1730 I ActivityManager: Process eu.depau.etchdroid (pid 4990) has died: fg  TOP 
+06-30 18:11:33.540   992  2238 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(uid/pid:10282/4990, [NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]], android.os.BinderProxy@3bc8391)
+06-30 18:11:33.540   992  3662 I WindowManager: WIN DEATH: Window{ba480e1 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}
+06-30 18:11:33.540   992  1466 D ConnectivityService: releasing NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ] (release request)
+06-30 18:11:33.540   992  3662 W InputManager-JNI: Input channel object 'ba480e1 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+06-30 18:11:33.540   992  1465 D EthernetNetworkFactory: eth0: onNetworkUnneeded for request: NetworkRequest [ REQUEST id=132, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:33.544   992  2393 I WindowManager: WIN DEATH: Window{8bbc474 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}
+06-30 18:11:33.544   992  2393 W InputManager-JNI: Input channel object '8bbc474 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+06-30 18:11:33.544   992  1502 I WindowManager: WIN DEATH: Window{7cd5585 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ProgressActivity}
+06-30 18:11:33.545   992  1502 W InputManager-JNI: Input channel object '7cd5585 eu.depau.etchdroid/eu.depau.etchdroid.ui.ProgressActivity (client)' was disposed without first being removed with the input manager!
+06-30 18:11:33.549   992  1016 W UsageStatsService: Unexpected activity event reported! (eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity event : 23 instanceId : 105170386)
+06-30 18:11:33.563   992  1018 I ActivityManager: Start proc 5214:eu.depau.etchdroid/u0a282 for top-activity {eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}
+06-30 18:11:33.574  5214  5214 W depau.etchdroid: Unexpected CPU variant for x86: generic.
+06-30 18:11:33.574  5214  5214 W depau.etchdroid: Known variants: atom, sandybridge, silvermont, kabylake, default
+06-30 18:11:33.578  5214  5214 E depau.etchdroid: Not starting debugger since process cannot load the jdwp agent.
+06-30 18:11:33.591   992  4492 I ActivityTaskManager: The Process eu.depau.etchdroid Already Exists in BG. So sending its PID: 5214
+06-30 18:11:33.592  5214  5230 E ashmem  : memfd: ro.vndk.version not defined or invalid (), this is mandated since P.
+06-30 18:11:33.599  5214  5214 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10282; state: ENABLED
+06-30 18:11:33.618  5214  5214 W depau.etchdroid: ClassLoaderContext classpath element mismatch. expected=/system_ext/framework/androidx.window.extensions.jar, found=/system/system_ext/framework/androidx.window.extensions.jar (PCL[]{PCL[/system_ext/framework/androidx.window.extensions.jar*214366484]#PCL[/system_ext/framework/androidx.window.sidecar.jar*368491714]} | PCL[]{PCL[/system/system_ext/framework/androidx.window.extensions.jar*214366484]#PCL[/system/system_ext/framework/androidx.window.sidecar.jar*368491714]})
+06-30 18:11:33.631  5214  5214 V GraphicsEnvironment: ANGLE Developer option for 'eu.depau.etchdroid' set to: 'default'
+06-30 18:11:33.632  5214  5214 V GraphicsEnvironment: ANGLE GameManagerService for eu.depau.etchdroid: false
+06-30 18:11:33.632  5214  5214 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+06-30 18:11:33.636  5214  5214 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+06-30 18:11:33.636  5214  5214 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+06-30 18:11:33.643   992  1011 W WindowManager: Exception thrown during dispatchAppVisibility Window{7cd5585 u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.ProgressActivity EXITING}
+06-30 18:11:33.650  5214  5214 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10282; state: ENABLED
+06-30 18:11:33.657  5214  5214 D FirebaseSessions: Dependency to CRASHLYTICS added.
+06-30 18:11:33.659  5214  5214 I FirebaseApp: Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+06-30 18:11:33.682  5214  5214 D FirebaseSessions: Initializing Firebase Sessions 3.0.6.
+06-30 18:11:33.683  5214  5214 I FirebaseCrashlytics: Initializing Firebase Crashlytics 20.0.6 for eu.depau.etchdroid
+06-30 18:11:33.688  5214  5214 D FirebaseSessions: Subscriber CRASHLYTICS registered.
+06-30 18:11:33.690  5214  5238 D FirebaseSessions: Notified CRASHLYTICS of new session 8623af3a4a4f4bc480038d900e6de35e
+06-30 18:11:33.696  5214  5214 I FirebaseInitProvider: FirebaseApp initialization successful
+06-30 18:11:33.696  5214  5214 D Sentry  : io.sentry.auto-init read: false
+06-30 18:11:33.728  5214  5245 I FirebaseCrashlytics: Saved version control info
+06-30 18:11:33.729  5214  5214 I Telemetry: Enabled: true
+06-30 18:11:33.729  5214  5214 I Telemetry: Enabled: true
+06-30 18:11:33.746   992  1502 D ConnectivityService: requestNetwork for uid/pid:10282/5214 activeRequest: null callbackRequest: 139 [NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+06-30 18:11:33.747   992  1465 D EthernetNetworkFactory: eth0: onNetworkNeeded for request: NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:33.747   992  1352 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:33.747   992  1352 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:33.747   992  1352 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:33.747  1784  1784 D PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]
+06-30 18:11:33.750  5214  5248 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10282; state: ENABLED
+06-30 18:11:33.754  5214  5266 I TRuntime.CctTransportBackend: Making request to: https://crashlyticsreports-pa.googleapis.com/v1/firelog/legacy/batchlog
+06-30 18:11:33.759  5214  5264 D TrafficStats: tagSocket(78) with statsTag=0xf001, statsUid=-1
+06-30 18:11:33.759  5214  5266 D TrafficStats: tagSocket(82) with statsTag=0xffffffff, statsUid=-1
+06-30 18:11:33.780  5214  5214 D FirebaseSessions: App foregrounded on eu.depau.etchdroid
+06-30 18:11:33.781  5214  5214 D FirebaseSessions: Process eu.depau.etchdroid is stale
+06-30 18:11:33.783  5214  5238 D FirebaseSessions: Cold app start detected
+06-30 18:11:33.783  5214  5238 D FirebaseSessions: Process eu.depau.etchdroid is stale
+06-30 18:11:33.785  5214  5242 D FirebaseSessions: Session Event Type: SESSION_START
+06-30 18:11:33.785  5214  5242 D FirebaseSessions: Successfully logged Session Start event.
+06-30 18:11:33.786  5214  5242 D FirebaseSessions: Notified CRASHLYTICS of new session 700f85c81dfc40e5bfcf9b2c778fc326
+06-30 18:11:33.787  5214  5214 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10282; state: DISABLED
+06-30 18:11:33.792  5214  5267 W Parcel  : Expecting binder but got null!
+06-30 18:11:33.803  5214  5224 I depau.etchdroid: JIT allocated 51KB for compiled code of java.lang.Object io.sentry.protocol.App$Deserializer.deserialize(io.sentry.ObjectReader, io.sentry.ILogger)
+06-30 18:11:33.805   992  1502 D CoreBackPreview: Window{f562bfb u0 eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@f7f1e71, mPriority=-1}
+06-30 18:11:33.818  5214  5214 D CompatibilityChangeReporter: Compat change id reported: 193247900; UID 10282; state: ENABLED
+06-30 18:11:33.883  5214  5267 I MESA    : Using gralloc0 CrOS API
+06-30 18:11:33.917  5214  5267 W EGL-MAIN: failed to get driver name for fd -1
+06-30 18:11:33.918  5214  5267 W EGL-MAIN: MESA-LOADER: failed to retrieve device information
+06-30 18:11:33.918  5214  5267 W EGL-MAIN: failed to get driver name for fd -1
+06-30 18:11:33.922  5214  5267 I [minigbm:virtgpu_init(51)]: virtgpu backend not enabling VIRTGPU_PARAM_CREATE_GUEST_HANDLE
+06-30 18:11:33.922  5214  5267 I [minigbm:virtgpu_init(51)]: virtgpu backend not enabling VIRTGPU_PARAM_RESOURCE_SYNC
+06-30 18:11:33.922  5214  5267 I [minigbm:virtgpu_init(51)]: virtgpu backend not enabling VIRTGPU_PARAM_GUEST_VRAM
+06-30 18:11:33.922  5214  5267 I [minigbm:virgl_get_caps(556)]: Supported CAPSET IDs: 6.
+06-30 18:11:33.923  5214  5267 I [minigbm:virgl_add_combination(372)]: Skipping unsupported combination format:842094158
+06-30 18:11:33.923  5214  5267 I [minigbm:virgl_add_combination(372)]: Skipping unsupported combination format:808530000
+06-30 18:11:33.926  5214  5267 E OpenGLRenderer: Device claims wide gamut support, cannot find matching config, error = EGL_SUCCESS
+06-30 18:11:33.926  5214  5267 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+06-30 18:11:33.932  5214  5267 E OpenGLRenderer: Unable to match the desired swap behavior.
+06-30 18:11:33.984  5214  5264 D TrafficStats: tagSocket(91) with statsTag=0xf001, statsUid=-1
+06-30 18:11:33.996   992  1010 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{a7883b8 u0 eu.depau.etchdroid/.ui.ProgressActivity} t-1 f}}
+06-30 18:11:34.294   992  1017 W BroadcastQueue: Exported Denial: sending Intent { act=android.intent.action.BATTERY_CHANGED flg=0x60000010 (has extras) }, action: android.intent.action.BATTERY_CHANGED from null (uid=-1) due to receiver ProcessRecord{9b8a964 5214:eu.depau.etchdroid/u0a282} (uid 10282) not specifying RECEIVER_EXPORTED
+06-30 18:11:34.298  5214  5264 D TrafficStats: tagSocket(110) with statsTag=0xf001, statsUid=-1
+06-30 18:11:34.385   992  2393 W InputManager-JNI: Input channel object '8cd5b93 Splash Screen eu.depau.etchdroid (client)' was disposed without first being removed with the input manager!
+06-30 18:11:35.318  5214  5266 I TRuntime.CctTransportBackend: Status Code: 200
+06-30 18:11:39.272  5214  5293 D ProfileInstaller: Skipping profile installation for eu.depau.etchdroid
+06-30 18:12:09.885  5214  5227 W System  : A resource failed to call end. 
+06-30 18:12:27.259  5214  5248 I TRuntime.CctTransportBackend: Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+06-30 18:12:27.265  5214  5248 D TrafficStats: tagSocket(5) with statsTag=0xffffffff, statsUid=-1
+06-30 18:12:29.777  5214  5248 I TRuntime.CctTransportBackend: Status Code: 200
+06-30 18:13:33.122   992  2393 I ActivityManager: Force stopping eu.depau.etchdroid appid=10282 user=0: from pid 5306
+06-30 18:13:33.122   992  2393 I ActivityManager: Killing 5214:eu.depau.etchdroid/u0a282 (adj 0): stop eu.depau.etchdroid due to from pid 5306
+06-30 18:13:33.123   992  2393 W ActivityTaskManager: Force removing ActivityRecord{1fa66a3 u0 eu.depau.etchdroid/.ui.MainActivity} t17 f}}: app died, no saved state
+06-30 18:13:33.125   992  2393 W InputManager-JNI: Input channel object 'f562bfb eu.depau.etchdroid/eu.depau.etchdroid.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+06-30 18:13:33.130  1784  1784 D CarrierSvcBindHelper: onHandleForceStop: [eu.depau.etchdroid]
+06-30 18:13:33.160   992  4492 V ActivityManager: Got obituary of 5214:eu.depau.etchdroid
+06-30 18:13:33.160   992  2238 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(uid/pid:10282/5214, [NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]], android.os.BinderProxy@f1db338)
+06-30 18:13:33.164   992  1466 D ConnectivityService: releasing NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ] (release request)
+06-30 18:13:33.164   992  1465 D EthernetNetworkFactory: eth0: onNetworkUnneeded for request: NetworkRequest [ REQUEST id=140, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10282 RequestorUid: 10282 RequestorPkg: eu.depau.etchdroid UnderlyingNetworks: Null] ]

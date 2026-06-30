@@ -1,0 +1,311 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.5.0 -- /home/runner/work/etchdroid/etchdroid/appium-tests/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/etchdroid/etchdroid/appium-tests
+configfile: pyproject.toml
+collecting ... collected 10 items
+
+tests/test_generic.py::test_regular_flow 
+[DEBUG] Starting driver fixture for test_regular_flow
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+PASSED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_generic.py::test_skip_verification 
+[DEBUG] Starting driver fixture for test_skip_verification
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+PASSED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_generic.py::test_accept_notifications 
+[DEBUG] Starting driver fixture for test_accept_notifications
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+FAILED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_generic.py::test_accept_then_deny_notifications 
+[DEBUG] Starting driver fixture for test_accept_then_deny_notifications
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+PASSED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_generic.py::test_windows_image_warning 
+[DEBUG] Starting driver fixture for test_windows_image_warning
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+PASSED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_generic.py::test_image_too_large 
+[DEBUG] Starting driver fixture for test_image_too_large
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+PASSED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_qemu.py::test_unplug_xhci 
+[DEBUG] Starting driver fixture for test_unplug_xhci
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+Waiting for write progress...
+Unplugging USB device...
+Sending monitor command: device_del usbstick
+Waiting for reconnect dialog...
+Plugging USB device back in...
+Sending monitor command: drive_add 0 id=usbstick,file=~/.cache/appium-vm/usb-storage.qcow2,if=none,format=qcow2
+Sending monitor command: device_add usb-storage,bus=xhci.0,id=usbstick,drive=usbstick,removable=on
+Accepting permission...
+Unplugging USB device...
+Sending monitor command: device_del usbstick
+Waiting for reconnect dialog...
+Plugging USB device back in...
+Sending monitor command: drive_add 0 id=usbstick,file=~/.cache/appium-vm/usb-storage.qcow2,if=none,format=qcow2
+Sending monitor command: device_add usb-storage,bus=xhci.0,id=usbstick,drive=usbstick,removable=on
+Accepting permission...
+PASSED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_qemu.py::test_regular_flow_with_random_data_uhci 
+[DEBUG] Starting driver fixture for test_regular_flow_with_random_data_uhci
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+Sending monitor command: device_del usbstick
+Sending monitor command: drive_add 0 id=usbstick-raw,file=/tmp/tmpg_rn621hetchdroid_qemu_test/etchdroid_test_regular_flow_with_random_data_uhci.img,if=none,format=raw
+Sending monitor command: device_add usb-storage,bus=uhci.0,id=usbstick-raw,drive=usbstick-raw,removable=on
+PASSEDSending monitor command: device_del usbstick-raw
+Sending monitor command: drive_add 0 id=usbstick,file=~/.cache/appium-vm/usb-storage.qcow2,if=none,format=qcow2
+Sending monitor command: device_add usb-storage,bus=xhci.0,id=usbstick,drive=usbstick,removable=on
+[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_qemu.py::test_unplug_with_random_data_uhci 
+[DEBUG] Starting driver fixture for test_unplug_with_random_data_uhci
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+Sending monitor command: device_del usbstick
+Sending monitor command: drive_add 0 id=usbstick-raw,file=/tmp/tmp_gn8qo0qetchdroid_qemu_test/etchdroid_test_unplug_with_random_data_uhci.img,if=none,format=raw
+Sending monitor command: device_add usb-storage,bus=uhci.0,id=usbstick-raw,drive=usbstick-raw,removable=on
+Waiting for write progress...
+Unplugging USB device...
+Sending monitor command: device_del usbstick-raw
+Waiting for reconnect dialog...
+Plugging USB device back in...
+Sending monitor command: drive_add 0 id=usbstick-raw,file=/tmp/tmp_gn8qo0qetchdroid_qemu_test/etchdroid_test_unplug_with_random_data_uhci.img,if=none,format=raw
+Sending monitor command: device_add usb-storage,bus=uhci.0,id=usbstick-raw,drive=usbstick-raw,removable=on
+Accepting permission...
+Unplugging USB device...
+Sending monitor command: device_del usbstick-raw
+Waiting for reconnect dialog...
+Plugging USB device back in...
+Sending monitor command: drive_add 0 id=usbstick-raw,file=/tmp/tmp_gn8qo0qetchdroid_qemu_test/etchdroid_test_unplug_with_random_data_uhci.img,if=none,format=raw
+Sending monitor command: device_add usb-storage,bus=uhci.0,id=usbstick-raw,drive=usbstick-raw,removable=on
+Accepting permission...
+PASSEDSending monitor command: device_del usbstick-raw
+Sending monitor command: drive_add 0 id=usbstick,file=~/.cache/appium-vm/usb-storage.qcow2,if=none,format=qcow2
+Sending monitor command: device_add usb-storage,bus=xhci.0,id=usbstick,drive=usbstick,removable=on
+[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+tests/test_qemu.py::test_unplug_resume_from_notification 
+[DEBUG] Starting driver fixture for test_unplug_resume_from_notification
+[DEBUG] Connecting to Appium...
+[DEBUG] Connected to Appium: 3.3.1
+[DEBUG] Starting logcat to /home/runner/work/etchdroid/etchdroid/appium-tests/../vm-outputs/logcat/
+[DEBUG] Performing setup (clearApp, startActivity)...
+[DEBUG] Yielding driver.
+Sending monitor command: device_del usbstick
+Sending monitor command: drive_add 0 id=usbstick,file=~/.cache/appium-vm/usb-storage.qcow2,if=none,format=qcow2
+Sending monitor command: device_add usb-storage,bus=xhci.0,id=usbstick,drive=usbstick,removable=on
+FAILED[DEBUG] Terminating app...
+[DEBUG] Cleaning up...
+
+
+=================================== FAILURES ===================================
+__________________________ test_accept_notifications ___________________________
+Traceback (most recent call last):
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 353, in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    yield
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/tests/test_generic.py", line 48, in test_accept_notifications
+    app.wait_for_success(driver)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/etchdroid/actions.py", line 74, in wait_for_success
+    wait_for_element(driver, '//android.widget.TextView[@resource-id="success_write_title"]', timeout=timeout)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/etchdroid/utils.py", line 44, in wait_for_element
+    return wait.until(
+           ^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/find.js:62:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AndroidUiautomator2Driver.findElOrElsWithProcessing (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:12:16)
+    at async AndroidUiautomator2Driver.findElement (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:27:16)
+_____________________ test_unplug_resume_from_notification _____________________
+Traceback (most recent call last):
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 353, in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 245, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/logging.py", line 850, in pytest_runtest_call
+    yield
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 900, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/skipping.py", line 268, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 179, in pytest_runtest_call
+    item.runtest()
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/python.py", line 1720, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/_pytest/python.py", line 166, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/tests/test_qemu.py", line 236, in test_unplug_resume_from_notification
+    app.wait_for_success(driver)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/etchdroid/actions.py", line 74, in wait_for_success
+    wait_for_element(driver, '//android.widget.TextView[@resource-id="success_write_title"]', timeout=timeout)
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/etchdroid/utils.py", line 44, in wait_for_element
+    return wait.until(
+           ^^^^^^^^^^^
+  File "/home/runner/work/etchdroid/etchdroid/appium-tests/.venv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 146, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/find.js:62:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AndroidUiautomator2Driver.findElOrElsWithProcessing (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:12:16)
+    at async AndroidUiautomator2Driver.findElement (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:27:16)
+----- generated xml file: /home/runner/work/etchdroid/etchdroid/junit.xml ------
+=========================== short test summary info ============================
+FAILED tests/test_generic.py::test_accept_notifications - selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/find.js:62:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AndroidUiautomator2Driver.findElOrElsWithProcessing (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:12:16)
+    at async AndroidUiautomator2Driver.findElement (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:27:16)
+FAILED tests/test_qemu.py::test_unplug_resume_from_notification - selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/build/lib/commands/find.js:62:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AndroidUiautomator2Driver.findElOrElsWithProcessing (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:12:16)
+    at async AndroidUiautomator2Driver.findElement (/home/runner/work/etchdroid/etchdroid/appium-tests/node_modules/@appium/base-driver/build/lib/basedriver/commands/find.js:27:16)
+=================== 2 failed, 8 passed in 590.10s (0:09:50) ====================
